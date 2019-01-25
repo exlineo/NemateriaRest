@@ -8,14 +8,14 @@ import { NOTICES_MODEL_PROVIDER } from '../constants';
 @Component()
 export class NoticesService {
     constructor(
-        @Inject(NOTICES_MODEL_PROVIDER) private readonly postModel: Model<NoticeModel>) { }
+        @Inject(NOTICES_MODEL_PROVIDER) private readonly noticeModel: Model<NoticeModel>) { }
 
-    async create(createPostDto: CreateNoticeDto): Promise<NoticeModel> {
-        const createdNotice = new this.postModel(createPostDto);
+    async create(createnoticeDto: CreateNoticeDto): Promise<NoticeModel> {
+        const createdNotice = new this.noticeModel(CreateNoticeDto);
         return await createdNotice.save();
     }
 
     async findAll(): Promise<NoticeModel[]> {
-        return await this.postModel.find().exec();
+        return await this.noticeModel.find().exec();
     }
 }
