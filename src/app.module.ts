@@ -2,13 +2,13 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 // Serveur REST
-import { PostsModule } from 'posts/posts.module';
-import { JeuxModule } from 'jeux/jeux.module';
+import { CollectionsModule } from 'collections/collections.module';
+import { NoticesModule } from 'notices/notices.module';
 // Module WebSocket
 import { WSModule } from 'ws/ws.module';
 
 @Module({
-  imports: [PostsModule, JeuxModule, WSModule],
+  imports: [CollectionsModule, NoticesModule, WSModule],
   controllers: [AppController],
   providers: [AppService],
 })
