@@ -1,0 +1,1 @@
+export const CONFIG_ADR = ''; // Server address
