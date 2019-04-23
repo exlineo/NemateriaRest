@@ -1,11 +1,11 @@
 import { Model } from 'mongoose';
-import { Component, Inject } from '@nestjs/common';
+import { Injectable, Inject } from '@nestjs/common';
 
 import { NoticeModel } from './interfaces/notice.interface';
 import { CreateNoticeDto } from './dto/create-notice.dto';
 import { NOTICES_MODEL_PROVIDER } from '../constants';
 
-@Component()
+@Injectable()
 export class NoticesService {
     constructor(
         @Inject(NOTICES_MODEL_PROVIDER) private readonly noticeModel: Model<NoticeModel>) { }

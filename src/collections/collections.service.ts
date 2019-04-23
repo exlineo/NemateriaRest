@@ -1,11 +1,11 @@
 import { Model } from 'mongoose';
-import { Component, Inject } from '@nestjs/common';
+import { Injectable, Inject } from '@nestjs/common';
 
 import { CollectionModel } from './interfaces/collection.interface';
 import { CreateCollectionDto } from './dto/create-collection.dto';
 import { COLLECTIONS_MODEL_PROVIDER } from '../constants';
 
-@Component()
+@Injectable()
 export class CollectionsService {
     constructor(
         @Inject(COLLECTIONS_MODEL_PROVIDER) private readonly postModel: Model<CollectionModel>) { }
