@@ -10,8 +10,8 @@ export class NoticesService {
     constructor(
         @Inject(NOTICES_MODEL_PROVIDER) private readonly noticeModel: Model<NoticeModel>) { }
 
-    async create(createnoticeDto: CreateNoticeDto): Promise<NoticeModel> {
-        const createdNotice = new this.noticeModel(CreateNoticeDto);
+    async create(createNoticeDto: CreateNoticeDto): Promise<NoticeModel> {
+        const createdNotice = new this.noticeModel(createNoticeDto);
         return await createdNotice.save();
     }
 

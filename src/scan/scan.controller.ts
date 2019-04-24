@@ -3,17 +3,17 @@ import { CreateScanDto } from './dto/scan.dto';
 import { ScanService } from './scan.service';
 import { ScanModel } from './interfaces/scan.interface';
 
-@Controller('Scan')
+@Controller('scans')
 export class ScanController {
-    constructor(private readonly ScanService: ScanService) { }
+    constructor(private readonly scanService: ScanService) { }
 
     @Post()
     async create(@Body() CreateScanDto: CreateScanDto) {
-        this.ScanService.create(CreateScanDto);
+        this.scanService.create(CreateScanDto);
     }
 
     @Get()
     async findAll(): Promise<ScanModel[]> {
-        return this.ScanService.findAll();
+        return this.scanService.findAll();
     }
 }

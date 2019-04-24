@@ -1,16 +1,36 @@
 import * as mongoose from 'mongoose';
 
 export const CollectionSchema = new mongoose.Schema({
-    title: {
+    _id: {
+        type: mongoose.SchemaTypes.ObjectId,
+        required: true,
+    },
+    titre: {
         type: String,
         required: true,
     },
-    content: {
+    alias: {
         type: String,
         required: false,
     },
-    userId: {
-        type: mongoose.SchemaTypes.ObjectId,
+    description: {
+        type: String,
+        required: true,
+    },
+    type: {
+        type: String,
+        required: true,
+    },
+    createur: {
+        type: String,
+        required: true,
+    },
+    appartient: {
+        type: String,
+        required: true,
+    },
+    langue: {
+        type: String,
         required: true,
     }
 });

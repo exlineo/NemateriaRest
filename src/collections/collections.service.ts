@@ -8,14 +8,14 @@ import { COLLECTIONS_MODEL_PROVIDER } from '../constants';
 @Injectable()
 export class CollectionsService {
     constructor(
-        @Inject(COLLECTIONS_MODEL_PROVIDER) private readonly postModel: Model<CollectionModel>) { }
+        @Inject(COLLECTIONS_MODEL_PROVIDER) private readonly collecModel: Model<CollectionModel>) { }
 
-    async create(createPostDto: CreateCollectionDto): Promise<CollectionModel> {
-        const createdCollection = new this.postModel(createPostDto);
+    async create(createCollecDto: CreateCollectionDto): Promise<CollectionModel> {
+        const createdCollection = new this.collecModel(createCollecDto);
         return await createdCollection.save();
     }
 
     async findAll(): Promise<CollectionModel[]> {
-        return await this.postModel.find().exec();
+        return await this.collecModel.find().exec();
     }
 }

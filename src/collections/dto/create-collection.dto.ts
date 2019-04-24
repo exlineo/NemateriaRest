@@ -1,5 +1,10 @@
 export class CreateCollectionDto {
-    readonly title: string;
-    readonly content: string;
-    readonly userId: string;
+    readonly _id: string;
+    readonly titre: string;
+    readonly alias: string;
+    readonly description: string;
+    readonly type: string;
+    readonly createur: string;
+    readonly appartient: string;
+    readonly langue: string;
 }

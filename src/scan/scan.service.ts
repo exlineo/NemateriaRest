@@ -3,18 +3,18 @@ import { Injectable, Inject } from '@nestjs/common';
 
 import { ScanModel } from './interfaces/scan.interface';
 import { CreateScanDto } from './dto/scan.dto';
-import { NOTICES_MODEL_PROVIDER } from '../constants';
+import { SCAN_MODEL_PROVIDER } from '../constants';
 
 @Injectable()
 export class ScanService {
-    constructor(@Inject(NOTICES_MODEL_PROVIDER) private readonly ScanModel: Model<ScanModel>) { }
+    constructor(@Inject(SCAN_MODEL_PROVIDER) private readonly scanModel: Model<ScanModel>) { }
 
-    async create(CreateScanDto: CreateScanDto): Promise<ScanModel> {
-        const createdNotice = new this.ScanModel(CreateScanDto);
+    async create(createScanDto: CreateScanDto): Promise<ScanModel> {
+        const createdNotice = new this.scanModel(createScanDto);
         return await createdNotice.save();
     }
 
     async findAll(): Promise<ScanModel[]> {
-        return await this.ScanModel.find().exec();
+        return await this.scanModel.find().exec();
     }
 }
