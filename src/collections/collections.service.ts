@@ -7,15 +7,53 @@ import { COLLECTIONS_MODEL_PROVIDER } from '../constants';
 
 @Injectable()
 export class CollectionsService {
-    constructor(
-        @Inject(COLLECTIONS_MODEL_PROVIDER) private readonly collecModel: Model<CollectionModel>) { }
+    constructor(@Inject(COLLECTIONS_MODEL_PROVIDER) private readonly collecModel: Model<CollectionModel>) { }
 
+    /**
+     * Créer une collection
+     * @param createCollecDto forme de la collection à transmettre
+     */
     async create(createCollecDto: CreateCollectionDto): Promise<CollectionModel> {
         const createdCollection = new this.collecModel(createCollecDto);
         return await createdCollection.save();
     }
-
+    /**
+     * Insérer plusieurs collections en une seule fois (ça servira jamais mais bon...)
+     * @param creeCollecsDto Un tableau de collections à insérer
+     
+    async creePlusieurs(creeCollecsDto: Array<CreateCollectionDto>): Promise<Array<CollectionModel>> {
+        const createdCollection = new this.collecModel(creeCollecsDto);
+        return await createdCollection.insertMany(creeCollecsDto);
+    }
+    */
+    /**
+     * Récupérer toutes les collections
+     */
     async findAll(): Promise<CollectionModel[]> {
         return await this.collecModel.find().exec();
     }
+    /**
+     * Récupérer une collection en fonction de son id
+     * @param id ID d'une collection
+     * @type String | number | Object
+     */
+    async findUn(id): Promise<CollectionModel> {
+        return await this.collecModel.findById(id).exec();
+    }
+    /**
+     * Mettre à jour un document
+     * @param id ID du document à mettre à jour
+     * @type String | number | Object
+     */
+    async updateUn(id, collec): Promise<CollectionModel> {
+        return await this.collecModel.findByIdAndUpdate(id, collec).exec();
+    }
+    /**
+     * Supprimer un élément en fonction de son ID
+     * @param id ID du document à supprimer
+     */
+    async deleteUn(id): Promise<CollectionModel> {
+        return await this.collecModel.findByIdAndDelete(id).exec();
+    }
+
 }

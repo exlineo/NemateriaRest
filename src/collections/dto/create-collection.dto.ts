@@ -5,6 +5,9 @@ export class CreateCollectionDto {
     readonly description: string;
     readonly type: string;
     readonly createur: string;
-    readonly appartient: string;
+    readonly fond:string;
     readonly langue: string;
+    readonly groupe?: Array<string>;
+    readonly notices?:Array<string> | Array<number>;
+    readonly series?:Array<string>;
 }
