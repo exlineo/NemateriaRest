@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Query } from '@nestjs/common';
 import { CreateScanDto } from './dto/scan.dto';
 import { ScanService } from './scan.service';
 import { ScanModel } from './interfaces/scan.interface';
@@ -7,13 +7,20 @@ import { ScanModel } from './interfaces/scan.interface';
 export class ScanController {
     constructor(private readonly scanService: ScanService) { }
 
-    @Post()
-    async create(@Body() CreateScanDto: CreateScanDto) {
-        this.scanService.create(CreateScanDto);
+    @Get()
+    async scanDirMeta() {
+        return await this.scanService.scan();
     }
 
-    @Get()
-    async findAll(): Promise<ScanModel[]> {
-        return this.scanService.findAll();
+    @Get(':dir')
+    async findUn(@Param('dir') dir:string, @Query() q:object):Promise<any> {
+        console.log(":dir détecté", dir, q); // dir > le dossier à scanner, q > des variables passées
+        return await this.scanService.openDir(dir);
+    }
+
+    @Post()
+    async findDir(@Body() body): Promise<any> {
+        console.log("Post", body)
+        this.scanService.scanDir(body);
     }
 }
