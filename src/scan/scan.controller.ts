@@ -9,18 +9,23 @@ export class ScanController {
 
     @Get()
     async scanDirMeta() {
-        return await this.scanService.scan();
+        // return await this.scanService.scan();
+        return 'Merci de préciser un fichier';
     }
-
+    /**
+     * 
+     * @param dir 
+     * @param q 
+     */
     @Get(':dir')
-    async findUn(@Param('dir') dir:string, @Query() q:object):Promise<any> {
+    async scanUnDir(@Param('dir') dir:string, @Query() q:object):Promise<any> {
         console.log(":dir détecté", dir, q); // dir > le dossier à scanner, q > des variables passées
-        return await this.scanService.openDir(dir);
+        return await this.scanService.scanDir(dir);
     }
-
-    @Post()
-    async findDir(@Body() body): Promise<any> {
-        console.log("Post", body)
-        this.scanService.scanDir(body);
+    
+    @Get(':fichier')
+    async scanUnFichier(@Param('fichier') fichier:string, @Query() q:object):Promise<any> {
+        console.log(":fichier détecté", fichier, q); // fichier > le fichier à scanner, q > des variables passées
+        return await this.scanService.scanFichier(fichier);
     }
 }

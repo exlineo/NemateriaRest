@@ -17,59 +17,48 @@ export class ScanService {
         // this.scan();
     }
     /**
-     * Scanner la liste des dossiers
+     * Scanner des métadonnées de fichiers dans un dossier donné
+     * Ouverture, lecture et fermeture du dossier scanné
+     * @param dir dossier à ouvrir pour scanner des metadonnées
      */
-    async scan(){
-        return this.exif.open()
-        // read directory
-        .then(() => this.exif.readMetadata(SCAN_ADR, ['-File:all']))
-        .then(console.log, console.error)
-        .then(() => this.exif.close())
-        .catch(console.error)
-    }
-
     async scanDir(dir){
-        console.log(SCAN_ADR, dir);
-        // return await 
-        // read directory
-        // .then(() => {
-        //     return this.exif.readMetadata(SCAN_ADR+dir, ['-File:all'])
-        // })
-        // .then(
-        //     data => {
-        //         console.log(data);
-        //         return data;
-        //     }, console.error)
-        // .then(() => this.exif.close())
-        // .catch(console.error)
-    }
-
-    async openDir(dir){
+        dir = dir.replace('../', ''); // Petite sécurité sur la chaîne pour éviter des tentatives hasardeuses
         await this.exif.open()
-        .then(() => this.readMetadata(dir))
+        .then(() => this.readDir(dir))
         .then(() => this.exif.close())
         .catch(console.error);
 
         return this.metas;
-        
-        // return new Promise(( resolve, reject ) => {
-            // return await this.exif.open()
-            // .then((open)=>{
-            //     return open;
-            // });
-            // .then(await this.readMetadata(dir))
-            // .then(() => this.exif.close())
-            // .catch(console.error);;
-        // });
-        // await 
-        // .then((d) => {
-        //     // return JSON.parse(d);
-        //     return this.readMetadata(dir)
-        // });
     }
-
-    async readMetadata(dir):Promise<any>{
+    /**
+     * Lecture de métadonnées dans un dossier donnée
+     * @param dir Dossier de scan
+     */
+    async readDir(dir):Promise<any>{
         await this.exif.readMetadata(SCAN_ADR+dir, ['-File:all'])
+        .then(data => {
+            this.metas = data;
+        })
+    }
+    /**
+     * Ouverture, lecture et fermeture d'un fichier dont les métadonnées seront extraites
+     * @param fichier Le fichier qui doit être lu
+     */
+    async scanFichier(fichier){
+        fichier = fichier.replace('../', ''); // Petite sécurité sur la chaîne pour éviter des tentatives hasardeuses
+        await this.exif.open()
+        .then(() => this.readFIchier(fichier))
+        .then(() => this.exif.close())
+        .catch(console.error);
+
+        return this.metas;
+    }
+    /**
+     * Lire les métadonnées d'un fichier
+     * @param fichier Fichier dont les métadonnées doivent être extraites
+     */
+    async readFIchier(fichier):Promise<any>{
+        await this.exif.readMetadata(fichier, ['-File:all'])
         .then(data => {
             this.metas = data;
         })
