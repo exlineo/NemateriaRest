@@ -10,6 +10,8 @@ import { SCAN_MODEL_PROVIDER } from '../constants';
 
 @Injectable()
 export class ScanService {
+    exifOpen;
+    metas;
     constructor(@Inject(SCAN_MODEL_PROVIDER) private readonly scanModel: Model<ScanModel>, private exif:ExiftoolProcess) {
         console.log(this.exif);
         // this.scan();
@@ -44,13 +46,32 @@ export class ScanService {
 
     async openDir(dir){
         await this.exif.open()
-        .then(() => {
-            this.readMetadata(dir)});
+        .then(() => this.readMetadata(dir))
+        .then(() => this.exif.close())
+        .catch(console.error);
+
+        return this.metas;
+        
+        // return new Promise(( resolve, reject ) => {
+            // return await this.exif.open()
+            // .then((open)=>{
+            //     return open;
+            // });
+            // .then(await this.readMetadata(dir))
+            // .then(() => this.exif.close())
+            // .catch(console.error);;
+        // });
+        // await 
+        // .then((d) => {
+        //     // return JSON.parse(d);
+        //     return this.readMetadata(dir)
+        // });
     }
 
     async readMetadata(dir):Promise<any>{
-        return await this.exif.readMetadata(SCAN_ADR+dir, ['-File:all'])
-        .then(() => this.exif.close())
-        .catch(console.error);
+        await this.exif.readMetadata(SCAN_ADR+dir, ['-File:all'])
+        .then(data => {
+            this.metas = data;
+        })
     }
 }
