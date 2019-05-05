@@ -9,9 +9,9 @@ export class CollectionsController {
     /**
      * Créer une nouvelle collection
      */
-    @Post()
+    @Put()
     async create(@Body() creeCollectionDto: CreateCollectionDto) {
-        this.collectionsService.create(creeCollectionDto);
+        this.collectionsService.cree(creeCollectionDto);
     }
     /**
      * Récupérer l'ensemble des collections
@@ -29,13 +29,13 @@ export class CollectionsController {
         return this.collectionsService.findUn(id);
     }
     /**
-     * 
+     * Mettre à jour une collection
      * @param id ID de la collection à mettre à jour
      * @param creeCollec Données de la collection mise à jour
      */
-    @Put(':id')
-    update(@Param('id') id: string, @Body() creeCollec: CreateCollectionDto) {
-        return `This action updates a #${id} cat`;
+    @Post()
+    update(@Body() upCollec: CreateCollectionDto) {
+        return this.collectionsService.updateUn(upCollec);
     }
     /**
      * Supprimer une collection en fonction de son ID

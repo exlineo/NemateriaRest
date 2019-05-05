@@ -13,7 +13,7 @@ export class CollectionsService {
      * Créer une collection
      * @param createCollecDto forme de la collection à transmettre
      */
-    async create(createCollecDto: CreateCollectionDto): Promise<CollectionModel> {
+    async cree(createCollecDto: CreateCollectionDto): Promise<CollectionModel> {
         const createdCollection = new this.collecModel(createCollecDto);
         return await createdCollection.save();
     }
@@ -45,8 +45,8 @@ export class CollectionsService {
      * @param id ID du document à mettre à jour
      * @type String | number | Object
      */
-    async updateUn(id, collec): Promise<CollectionModel> {
-        return await this.collecModel.findByIdAndUpdate(id, collec).exec();
+    async updateUn(collec): Promise<CollectionModel> {
+        return await this.collecModel.findByIdAndUpdate(collec._id, collec).exec();
     }
     /**
      * Supprimer un élément en fonction de son ID
