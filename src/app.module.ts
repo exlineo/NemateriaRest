@@ -6,6 +6,7 @@ import { CollectionsModule } from './collections/collections.module';
 import { SetsModule } from './sets/sets.module';
 import { NoticesModule } from './notices/notices.module';
 import { FiltresModule } from './filtres/filtres.module';
+import { MapsModule } from './mappage/maps.module';
 
 import { WSModule } from './ws/ws.module';
 import { ScanModule } from './scan/scan.module';
@@ -13,7 +14,7 @@ import { ScanModule } from './scan/scan.module';
 // Module WebSocket
 
 @Module({
-  imports: [CollectionsModule, SetsModule, NoticesModule, ScanModule, WSModule, FiltresModule],
+  imports: [CollectionsModule, SetsModule, NoticesModule, ScanModule, WSModule, FiltresModule, MapsModule],
   controllers: [AppController],
   providers: [AppService],
 })
