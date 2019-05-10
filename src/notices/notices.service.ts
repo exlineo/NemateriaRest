@@ -25,8 +25,9 @@ export class NoticesService {
      * Rechercher des données en fonction de critères transmis
      * @param req Argument transmis pour faire une recherche
      */
-    async findReq(req): Promise<NoticeModel[]> {
-        return await this.noticeModel.find(req).exec();
+    async findCollection(req): Promise<NoticeModel[]> {
+        console.log("Id collection", req.idCollection);
+        return await this.noticeModel.find({ 'relations.idCollection' : req.idCollection }).exec();
     }
     /**
      * Trouver toutes les notices
