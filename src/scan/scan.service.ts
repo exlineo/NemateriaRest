@@ -24,9 +24,9 @@ export class ScanService {
     async scanDir(dir){
         dir = dir.replace('../', ''); // Petite sécurité sur la chaîne pour éviter des tentatives hasardeuses
         await this.exif.open()
-        .then(() => this.readDir(dir))
-        .then(() => this.exif.close())
-        .catch(console.error);
+            .then(() => this.readDir(dir))
+            .then(() => this.exif.close())
+            .catch(console.error);
 
         return this.metas;
     }
