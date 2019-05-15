@@ -13,22 +13,51 @@ export class NoticesController {
      * @param req Requête reçue dans le corps
      */
     @Get()
-    async findPaquet(@Query() req):Promise<any> {
-        if(req){
-            console.log("requete notice détectée", req); // dir > le dossier à scanner, q > des variables passées
-            return this.noticesService.findCollection(req);
-        }else{
-            console.log("Notices : pas de requete détectée");
+    async findPaquet():Promise<any> {
+            console.log("Notices : pas de requete détectée, renvoie de toutes les notices");
             return this.noticesService.findAll();
-        }
+    }
+    // async findPaquet(@Query() req):Promise<any> {
+    //     if(req){
+    //         console.log("requete notice détectée", req); // dir > le dossier à scanner, q > des variables passées
+    //         return this.noticesService.findCollection(req);
+    //     }else{
+    //         console.log("Notices : pas de requete détectée");
+    //         return this.noticesService.findAll();
+    //     }
+    // }
+    /**
+     * Sélectionner toutes les notices une celles correspondant à la requête
+     * @param c Paramètre collection transmis
+     */
+    @Get('/collection/:c')
+    async findCollection(@Param('c') c):Promise<any> {
+            console.log("Demande des notice d'une collection", c); // c = id de la collection à récupérer
+            return this.noticesService.findCollection(c);
     }
     /**
      * Récupérer une collection en fonction de son ID
      * @param id ID de la collection à récupérer
      */
-    @Get(':id')
+    @Get('/notice/:id')
     async findUn(@Param('id') id): Promise<NoticeModel> {
         return this.noticesService.findUn(id);
+    }
+    /**
+     * Récupérer une collection en fonction de son ID
+     * @param id ID de la collection à récupérer
+     */
+    @Get(':count')
+    async findCount(): Promise<number> {
+        return this.noticesService.countAll();
+    }
+    /**
+     * Récupérer une collection en fonction de son ID
+     * @param id ID de la collection à récupérer
+     */
+    @Get('/collection/:c/count')
+    async findCollecCount(@Param('c') c): Promise<number> {
+        return this.noticesService.countCollec(c);
     }
     /**
      * Créer une notice

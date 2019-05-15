@@ -29,6 +29,14 @@ export class CollectionsController {
         return this.collectionsService.findUn(id);
     }
     /**
+     * Récupérer une collection en fonction de son ID
+     * @param id ID de la collection à récupérer
+     */
+    @Get('/:id/series')
+    async findSeries(@Param('id') id): Promise<object> {
+        return this.collectionsService.findSeries(id);
+    }
+    /**
      * Mettre à jour une collection
      * @param id ID de la collection à mettre à jour
      * @param creeCollec Données de la collection mise à jour

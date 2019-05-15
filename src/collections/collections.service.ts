@@ -55,5 +55,12 @@ export class CollectionsService {
     async deleteUn(id): Promise<CollectionModel> {
         return await this.collecModel.findByIdAndDelete(id).exec();
     }
-
+    /**
+     * Otenir la liste des séries d'une collection données
+     * @param id ID du document à supprimer
+     */
+    async findSeries(id): Promise<Array<Object>> {
+        console.log("Les séries sont appelées");
+        return await this.collecModel.find({ '_id' : id }).select('relations.serie -_id').exec();
+    }
 }

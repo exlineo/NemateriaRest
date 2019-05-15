@@ -25,15 +25,31 @@ export class NoticesService {
      * Rechercher des données en fonction de critères transmis
      * @param req Argument transmis pour faire une recherche
      */
-    async findCollection(req): Promise<NoticeModel[]> {
-        console.log("Id collection", req.idCollection);
-        return await this.noticeModel.find({ 'relations.idCollection' : req.idCollection }).exec();
+    async findCollection(id): Promise<NoticeModel[]> {
+        console.log("Id collection", id);
+        return await this.noticeModel.find({ 'relations.idCollection' : id }).exec();
     }
+    // async findCollection(req): Promise<NoticeModel[]> {
+    //     console.log("Id collection", req.idCollection);
+    //     return await this.noticeModel.find({ 'relations.idCollection' : req.idCollection }).exec();
+    // }
     /**
      * Trouver toutes les notices
      */
     async findAll(): Promise<NoticeModel[]> {
         return await this.noticeModel.find().exec();
+    }
+    /**
+     * Donner le nombre global de notices disponibles
+     */
+    async countAll(){
+        return await this.noticeModel.find().estimatedDocumentCount();
+    }
+    /**
+     * Donner le nombre global de notices disponibles
+     */
+    async countCollec(id){
+        return await this.noticeModel.find({ 'relations.idCollection' : id }).estimatedDocumentCount();
     }
     /**
      * 
