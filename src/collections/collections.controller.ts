@@ -6,13 +6,7 @@ import { CollectionModel } from './interfaces/collection.interface';
 @Controller('collections')
 export class CollectionsController {
     constructor(private readonly collectionsService: CollectionsService) { }
-    /**
-     * Créer une nouvelle collection
-     */
-    @Put()
-    async create(@Body() creeCollectionDto: CreateCollectionDto) {
-        this.collectionsService.cree(creeCollectionDto);
-    }
+    
     /**
      * Récupérer l'ensemble des collections
      */
@@ -37,13 +31,22 @@ export class CollectionsController {
         return this.collectionsService.findSeries(id);
     }
     /**
+     * Créer une nouvelle collection
+     */
+    @Post()
+    async create(@Body() collecDto: CreateCollectionDto) {
+        console.log("Ajout tnté", collecDto);
+        this.collectionsService.cree(collecDto);
+    }
+    /**
      * Mettre à jour une collection
      * @param id ID de la collection à mettre à jour
      * @param creeCollec Données de la collection mise à jour
      */
-    @Post()
-    update(@Body() upCollec: CreateCollectionDto) {
-        return this.collectionsService.updateUn(upCollec);
+    @Put()
+    update(@Body() upCollecDto: CreateCollectionDto) {
+        console.log("Update tenté", upCollecDto);
+        return this.collectionsService.updateUn(upCollecDto);
     }
     /**
      * Supprimer une collection en fonction de son ID

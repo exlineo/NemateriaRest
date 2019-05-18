@@ -8,15 +8,6 @@ import { COLLECTIONS_MODEL_PROVIDER } from '../constants';
 @Injectable()
 export class CollectionsService {
     constructor(@Inject(COLLECTIONS_MODEL_PROVIDER) private readonly collecModel: Model<CollectionModel>) { }
-
-    /**
-     * Créer une collection
-     * @param createCollecDto forme de la collection à transmettre
-     */
-    async cree(createCollecDto: CreateCollectionDto): Promise<CollectionModel> {
-        const createdCollection = new this.collecModel(createCollecDto);
-        return await createdCollection.save();
-    }
     /**
      * Insérer plusieurs collections en une seule fois (ça servira jamais mais bon...)
      * @param creeCollecsDto Un tableau de collections à insérer
@@ -39,6 +30,15 @@ export class CollectionsService {
      */
     async findUn(id): Promise<CollectionModel> {
         return await this.collecModel.findById(id).exec();
+    }
+    /**
+     * Créer une collection
+     * @param createCollecDto forme de la collection à transmettre
+     */
+    async cree(creeCollecDto: CreateCollectionDto): Promise<CollectionModel> {
+        console.log(creeCollecDto)
+        const createdCollection = new this.collecModel(creeCollecDto);
+        return await createdCollection.save();
     }
     /**
      * Mettre à jour un document

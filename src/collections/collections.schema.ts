@@ -1,10 +1,6 @@
 import * as mongoose from 'mongoose';
 
 export const CollectionSchema = new mongoose.Schema({
-    _id: {
-        type: mongoose.SchemaTypes.ObjectId,
-        required: true,
-    },
     titre: {
         type: String,
         required: true,
@@ -25,12 +21,24 @@ export const CollectionSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    appartient: {
+    fond: {
         type: String,
-        required: true,
+        required: false,
     },
     langue: {
         type: String,
-        required: true,
+        required: false,
+    },
+    groupe: {
+        type: Array,
+        required: false,
+    },
+    notices: {
+        type: Array,
+        required: false,
+    },
+    series: {
+        type: Array,
+        required: false,
     }
 });
