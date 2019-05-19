@@ -8,9 +8,10 @@ export class ScanController {
     constructor(private readonly scanService: ScanService) { }
 
     @Get()
-    async scanDirMeta() {
-        // return await this.scanService.scan();
-        return 'Merci de préciser un fichier';
+    async listeDossiers() {
+        console.log("Liste de dossiers", await this.scanService.scan());
+        return await this.scanService.scan()
+       // return 'Merci de préciser un fichier';
     }
     /**
      * 
