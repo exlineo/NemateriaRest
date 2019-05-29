@@ -1,5 +1,5 @@
 export class CreateCollectionDto {
-    readonly _id: string;
+    readonly _id?: number | string;
     readonly titre: string;
     readonly alias: string;
     readonly description: string;
