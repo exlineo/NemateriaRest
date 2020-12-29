@@ -46,6 +46,7 @@ export class FiltresService {
      * @param id ID du document à supprimer
      */
     async deleteUn(id): Promise<FiltreModel> {
+        console.log("Destruction d'un filtre", id);
         return await this.filtreModel.findByIdAndDelete(id).exec();
     }
 }

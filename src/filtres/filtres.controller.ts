@@ -44,6 +44,7 @@ export class FiltresController {
      */
     @Delete(':id')
     remove(@Param('id') id: string) {
-        return `This action removes a #${id} cat`;
+        // return `This action removes a #${id} filter`;
+        return this.filtresServ.deleteUn(id);
     }
 }

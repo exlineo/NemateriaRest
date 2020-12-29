@@ -17,15 +17,6 @@ export class NoticesController {
             console.log("Notices : pas de requete détectée, renvoie de toutes les notices");
             return this.noticesService.findAll();
     }
-    // async findPaquet(@Query() req):Promise<any> {
-    //     if(req){
-    //         console.log("requete notice détectée", req); // dir > le dossier à scanner, q > des variables passées
-    //         return this.noticesService.findCollection(req);
-    //     }else{
-    //         console.log("Notices : pas de requete détectée");
-    //         return this.noticesService.findAll();
-    //     }
-    // }
     /**
      * Sélectionner toutes les notices une celles correspondant à la requête
      * @param c Paramètre collection transmis

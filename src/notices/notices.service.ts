@@ -29,10 +29,6 @@ export class NoticesService {
         console.log("Id collection", id);
         return await this.noticeModel.find({ 'relations.idCollection' : id }).exec();
     }
-    // async findCollection(req): Promise<NoticeModel[]> {
-    //     console.log("Id collection", req.idCollection);
-    //     return await this.noticeModel.find({ 'relations.idCollection' : req.idCollection }).exec();
-    // }
     /**
      * Trouver toutes les notices
      */
