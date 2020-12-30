@@ -27,7 +27,7 @@
         "@nestjs/testing": "^7.6.4",
         "@nestjs/websockets": "^7.6.4",
         "@types/node": "10.12.27",
-        "acorn": "^6.1.1",
+        "acorn": "^6.4.1",
         "dist-exiftool": "^10.53.0",
         "mongoose": "5.5.2",
         "node-exiftool": "2.3.0",
