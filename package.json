@@ -20,12 +20,12 @@
         "webpack": "webpack --config webpack.config.js"
     },
     "dependencies": {
-        "@nestjs/common": "6.1.1",
-        "@nestjs/core": "6.1.1",
-        "@nestjs/microservices": "5.7.4",
-        "@nestjs/platform-express": "6.1.1",
-        "@nestjs/testing": "5.7.4",
-        "@nestjs/websockets": "5.7.4",
+        "@nestjs/common": "^7.6.4",
+        "@nestjs/core": "^7.6.4",
+        "@nestjs/microservices": "^7.6.4",
+        "@nestjs/platform-express": "^7.6.4",
+        "@nestjs/testing": "^7.6.4",
+        "@nestjs/websockets": "^7.6.4",
         "@types/node": "10.12.27",
         "acorn": "^6.1.1",
         "dist-exiftool": "^10.53.0",

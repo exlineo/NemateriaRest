@@ -8,13 +8,12 @@ import { NoticesModule } from './notices/notices.module';
 import { FiltresModule } from './filtres/filtres.module';
 import { MapsModule } from './mappage/maps.module';
 
-import { WSModule } from './ws/ws.module';
 import { ScanModule } from './scan/scan.module';
 // Serveur REST
 // Module WebSocket
 
 @Module({
-  imports: [CollectionsModule, SetsModule, NoticesModule, ScanModule, WSModule, FiltresModule, MapsModule],
+  imports: [CollectionsModule, SetsModule, NoticesModule, ScanModule, FiltresModule, MapsModule],
   controllers: [AppController],
   providers: [AppService],
 })

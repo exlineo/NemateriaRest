@@ -25,7 +25,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
     ],
     output: {
-        path: path.join(__dirname, 'dist'),
-        filename: 'server.js',
+        path: path.join(__dirname, 'prod'),
+        filename: 'nemateriarest.js',
     },
 };
