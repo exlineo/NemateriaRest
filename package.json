@@ -33,7 +33,7 @@
         "node-exiftool": "2.3.0",
         "reflect-metadata": "0.1.13",
         "rxjs": "^6.5.1",
-        "sequelize": "^5.7.5",
+        "sequelize": "^5.15.1",
         "socket.io-redis": "^5.2.0",
         "typescript": "3.4.4"
     },
