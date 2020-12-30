@@ -1,11 +1,11 @@
 import { Connection } from 'mongoose';
 
 import { CompteSchema } from './comptes.schema';
-import { COMPTE_MODEL_PROVIDER, DB_PROVIDER } from '../constants';
+import { COMPTES_MODEL_PROVIDER, DB_PROVIDER } from '../constants';
 
 export const comptesProviders = [
     {
-        provide: COMPTE_MODEL_PROVIDER,
+        provide: COMPTES_MODEL_PROVIDER,
         useFactory: (connection: Connection) => connection.model('Compte', CompteSchema),
         inject: [DB_PROVIDER],
     },

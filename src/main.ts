@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 // import { NestExpressApplication } from './'
-import { DispatchError } from './shared/filters/dispatch-error';
+// import { DispatchError } from './shared/filters/dispatch-error';
 
 async function bootstrap() {
   // const app = await NestFactory.create<NestExpressApplication>(AppModule, {cors: {

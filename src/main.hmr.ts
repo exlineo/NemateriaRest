@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { DispatchError } from './shared/filters/dispatch-error';
+// import { DispatchError } from './shared/filters/dispatch-error';
 
 declare const module: any;
 

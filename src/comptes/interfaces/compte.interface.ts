@@ -1,5 +1,4 @@
 import { Document } from 'mongoose';
-
 export interface CompteModel extends Document {
     readonly _id: any;
     readonly nom: string;
