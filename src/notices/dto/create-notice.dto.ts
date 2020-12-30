@@ -1,5 +1,5 @@
 export class CreateNoticeDto {
-    readonly _id?: number | string;
+    readonly _id?: any;
     readonly title: string;
     readonly content: string;
     readonly userId: string;

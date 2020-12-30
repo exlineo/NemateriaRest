@@ -3,6 +3,6 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class AppService {
   root(): string {
-    return 'Nest REST serveur';
+    return 'Serveur REST Nemateria démarré.';
   }
 }

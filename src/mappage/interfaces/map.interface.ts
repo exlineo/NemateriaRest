@@ -1,7 +1,7 @@
 import { Document } from 'mongoose';
 
 export interface MapModel extends Document {
-    readonly _id: string;
+    readonly _id: any;
     readonly titre: string;
     readonly alias: string;
     readonly description: string;
@@ -13,4 +13,3 @@ export interface MapModel extends Document {
     readonly notices?:Array<string> | Array<number>;
     readonly series?:Array<string>;
 }
-// {fond:"Quercy", groupe:["Mémoire de la grande guerre"]}

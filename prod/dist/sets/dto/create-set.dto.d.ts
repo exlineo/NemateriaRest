@@ -1,5 +1,5 @@
 export declare class CreateSetDto {
-    readonly _id: string;
+    readonly _id?: any;
     readonly titre: string;
     readonly alias: string;
     readonly description: string;

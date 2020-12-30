@@ -22,7 +22,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "f62cb3735fc2692b4772";
+/******/ 	var hotCurrentHash = "333203eb5c2fcb526dff";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -805,7 +805,7 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nconst app_controller_1 = __webpack_require__(/*! ./app.controller */ \"./src/app.controller.ts\");\r\nconst app_service_1 = __webpack_require__(/*! ./app.service */ \"./src/app.service.ts\");\r\nconst collections_module_1 = __webpack_require__(/*! ./collections/collections.module */ \"./src/collections/collections.module.ts\");\r\nconst sets_module_1 = __webpack_require__(/*! ./sets/sets.module */ \"./src/sets/sets.module.ts\");\r\nconst notices_module_1 = __webpack_require__(/*! ./notices/notices.module */ \"./src/notices/notices.module.ts\");\r\nconst filtres_module_1 = __webpack_require__(/*! ./filtres/filtres.module */ \"./src/filtres/filtres.module.ts\");\r\nconst maps_module_1 = __webpack_require__(/*! ./mappage/maps.module */ \"./src/mappage/maps.module.ts\");\r\nconst scan_module_1 = __webpack_require__(/*! ./scan/scan.module */ \"./src/scan/scan.module.ts\");\r\nlet AppModule = class AppModule {\r\n};\r\nAppModule = __decorate([\r\n    common_1.Module({\r\n        imports: [collections_module_1.CollectionsModule, sets_module_1.SetsModule, notices_module_1.NoticesModule, scan_module_1.ScanModule, filtres_module_1.FiltresModule, maps_module_1.MapsModule],\r\n        controllers: [app_controller_1.AppController],\r\n        providers: [app_service_1.AppService],\r\n    })\r\n], AppModule);\r\nexports.AppModule = AppModule;\r\n\n\n//# sourceURL=webpack:///./src/app.module.ts?");
+eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nconst app_controller_1 = __webpack_require__(/*! ./app.controller */ \"./src/app.controller.ts\");\r\nconst app_service_1 = __webpack_require__(/*! ./app.service */ \"./src/app.service.ts\");\r\nconst collections_module_1 = __webpack_require__(/*! ./collections/collections.module */ \"./src/collections/collections.module.ts\");\r\nconst sets_module_1 = __webpack_require__(/*! ./sets/sets.module */ \"./src/sets/sets.module.ts\");\r\nconst notices_module_1 = __webpack_require__(/*! ./notices/notices.module */ \"./src/notices/notices.module.ts\");\r\nconst filtres_module_1 = __webpack_require__(/*! ./filtres/filtres.module */ \"./src/filtres/filtres.module.ts\");\r\nconst maps_module_1 = __webpack_require__(/*! ./mappage/maps.module */ \"./src/mappage/maps.module.ts\");\r\nconst scan_module_1 = __webpack_require__(/*! ./scan/scan.module */ \"./src/scan/scan.module.ts\");\r\nconst comptes_module_1 = __webpack_require__(/*! ./comptes/comptes.module */ \"./src/comptes/comptes.module.ts\");\r\nlet AppModule = class AppModule {\r\n};\r\nAppModule = __decorate([\r\n    common_1.Module({\r\n        imports: [collections_module_1.CollectionsModule, sets_module_1.SetsModule, notices_module_1.NoticesModule, scan_module_1.ScanModule, filtres_module_1.FiltresModule, maps_module_1.MapsModule, comptes_module_1.ComptesModule],\r\n        controllers: [app_controller_1.AppController],\r\n        providers: [app_service_1.AppService],\r\n    })\r\n], AppModule);\r\nexports.AppModule = AppModule;\r\n\n\n//# sourceURL=webpack:///./src/app.module.ts?");
 
 /***/ }),
 
@@ -817,7 +817,7 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nlet AppService = class AppService {\r\n    root() {\r\n        return 'Nest REST serveur';\r\n    }\r\n};\r\nAppService = __decorate([\r\n    common_1.Injectable()\r\n], AppService);\r\nexports.AppService = AppService;\r\n\n\n//# sourceURL=webpack:///./src/app.service.ts?");
+eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nlet AppService = class AppService {\r\n    root() {\r\n        return 'Serveur REST Nemateria démarré.';\r\n    }\r\n};\r\nAppService = __decorate([\r\n    common_1.Injectable()\r\n], AppService);\r\nexports.AppService = AppService;\r\n\n\n//# sourceURL=webpack:///./src/app.service.ts?");
 
 /***/ }),
 
@@ -893,6 +893,66 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\ncl
 
 /***/ }),
 
+/***/ "./src/comptes/comptes.controller.ts":
+/*!*******************************************!*\
+  !*** ./src/comptes/comptes.controller.ts ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nvar __metadata = (this && this.__metadata) || function (k, v) {\r\n    if (typeof Reflect === \"object\" && typeof Reflect.metadata === \"function\") return Reflect.metadata(k, v);\r\n};\r\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\r\n    return new (P || (P = Promise))(function (resolve, reject) {\r\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\r\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\r\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\r\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\r\n    });\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nconst comptes_service_1 = __webpack_require__(/*! ./comptes.service */ \"./src/comptes/comptes.service.ts\");\r\nlet ComptesController = class ComptesController {\r\n    constructor(compteService) {\r\n        this.compteService = compteService;\r\n    }\r\n    find() {\r\n        return __awaiter(this, void 0, void 0, function* () {\r\n        });\r\n    }\r\n};\r\n__decorate([\r\n    common_1.Get(),\r\n    __metadata(\"design:type\", Function),\r\n    __metadata(\"design:paramtypes\", []),\r\n    __metadata(\"design:returntype\", Promise)\r\n], ComptesController.prototype, \"find\", null);\r\nComptesController = __decorate([\r\n    common_1.Controller('comptes'),\r\n    __metadata(\"design:paramtypes\", [comptes_service_1.ComptesService])\r\n], ComptesController);\r\nexports.ComptesController = ComptesController;\r\n\n\n//# sourceURL=webpack:///./src/comptes/comptes.controller.ts?");
+
+/***/ }),
+
+/***/ "./src/comptes/comptes.module.ts":
+/*!***************************************!*\
+  !*** ./src/comptes/comptes.module.ts ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nconst comptes_controller_1 = __webpack_require__(/*! ./comptes.controller */ \"./src/comptes/comptes.controller.ts\");\r\nconst comptes_service_1 = __webpack_require__(/*! ./comptes.service */ \"./src/comptes/comptes.service.ts\");\r\nconst comptes_providers_1 = __webpack_require__(/*! ./comptes.providers */ \"./src/comptes/comptes.providers.ts\");\r\nlet ComptesModule = class ComptesModule {\r\n};\r\nComptesModule = __decorate([\r\n    common_1.Module({\r\n        controllers: [comptes_controller_1.ComptesController],\r\n        providers: [comptes_service_1.ComptesService, ...comptes_providers_1.comptesProviders]\r\n    })\r\n], ComptesModule);\r\nexports.ComptesModule = ComptesModule;\r\n\n\n//# sourceURL=webpack:///./src/comptes/comptes.module.ts?");
+
+/***/ }),
+
+/***/ "./src/comptes/comptes.providers.ts":
+/*!******************************************!*\
+  !*** ./src/comptes/comptes.providers.ts ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst comptes_schema_1 = __webpack_require__(/*! ./comptes.schema */ \"./src/comptes/comptes.schema.ts\");\r\nconst constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\r\nexports.comptesProviders = [\r\n    {\r\n        provide: constants_1.COMPTE_MODEL_PROVIDER,\r\n        useFactory: (connection) => connection.model('Compte', comptes_schema_1.CompteSchema),\r\n        inject: [constants_1.DB_PROVIDER],\r\n    },\r\n];\r\n\n\n//# sourceURL=webpack:///./src/comptes/comptes.providers.ts?");
+
+/***/ }),
+
+/***/ "./src/comptes/comptes.schema.ts":
+/*!***************************************!*\
+  !*** ./src/comptes/comptes.schema.ts ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nexports.CompteSchema = new mongoose.Schema({\r\n    _id: {\r\n        type: mongoose.SchemaTypes.ObjectId,\r\n        required: true,\r\n    },\r\n    nom: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    compte: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    mdp: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    description: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    email: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    statut: {\r\n        type: Number,\r\n        required: true,\r\n    }\r\n});\r\n\n\n//# sourceURL=webpack:///./src/comptes/comptes.schema.ts?");
+
+/***/ }),
+
+/***/ "./src/comptes/comptes.service.ts":
+/*!****************************************!*\
+  !*** ./src/comptes/comptes.service.ts ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nvar __metadata = (this && this.__metadata) || function (k, v) {\r\n    if (typeof Reflect === \"object\" && typeof Reflect.metadata === \"function\") return Reflect.metadata(k, v);\r\n};\r\nvar __param = (this && this.__param) || function (paramIndex, decorator) {\r\n    return function (target, key) { decorator(target, key, paramIndex); }\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst mongoose_1 = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nconst constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\r\nlet ComptesService = class ComptesService {\r\n    constructor(compteModel) {\r\n        this.compteModel = compteModel;\r\n    }\r\n};\r\nComptesService = __decorate([\r\n    common_1.Injectable(),\r\n    __param(0, common_1.Inject(constants_1.COMPTE_MODEL_PROVIDER)),\r\n    __metadata(\"design:paramtypes\", [mongoose_1.Model])\r\n], ComptesService);\r\nexports.ComptesService = ComptesService;\r\n\n\n//# sourceURL=webpack:///./src/comptes/comptes.service.ts?");
+
+/***/ }),
+
 /***/ "./src/config.ts":
 /*!***********************!*\
   !*** ./src/config.ts ***!
@@ -901,7 +961,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\ncl
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.CONFIG_ADR = 'mongodb://admin:exlineo@localhost:27017/nemateria?authSource=admin';\r\nexports.SCAN_ADR = '/home/exlineo/dev/nemateriarest/medias/';\r\n\n\n//# sourceURL=webpack:///./src/config.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.CONFIG_ADR = 'mongodb://admin:exlineo@localhost:27017/nemateria?authSource=admin';\r\nexports.SCAN_ADR = '/var/www/html/collections/';\r\n\n\n//# sourceURL=webpack:///./src/config.ts?");
 
 /***/ }),
 
@@ -913,7 +973,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nex
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.DB_PROVIDER = 'DbConnectionToken';\r\nexports.POST_MODEL_PROVIDER = 'PostModelToken';\r\nexports.JEU_MODEL_PROVIDER = 'JeuModelToken';\r\nexports.NOTICES_MODEL_PROVIDER = 'NoticesModelToken';\r\nexports.COLLECTIONS_MODEL_PROVIDER = 'CollectionsModelToken';\r\nexports.SETS_MODEL_PROVIDER = 'SetsModelToken';\r\nexports.SCAN_MODEL_PROVIDER = 'ScanModelToken';\r\nexports.FILTRES_MODEL_PROVIDER = 'FiltresModelToken';\r\nexports.MAPS_MODEL_PROVIDER = 'MapsModelToken';\r\n\n\n//# sourceURL=webpack:///./src/constants.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.DB_PROVIDER = 'DbConnectionToken';\r\nexports.POST_MODEL_PROVIDER = 'PostModelToken';\r\nexports.JEU_MODEL_PROVIDER = 'JeuModelToken';\r\nexports.NOTICES_MODEL_PROVIDER = 'NoticesModelToken';\r\nexports.COLLECTIONS_MODEL_PROVIDER = 'CollectionsModelToken';\r\nexports.SETS_MODEL_PROVIDER = 'SetsModelToken';\r\nexports.SCAN_MODEL_PROVIDER = 'ScanModelToken';\r\nexports.FILTRES_MODEL_PROVIDER = 'FiltresModelToken';\r\nexports.MAPS_MODEL_PROVIDER = 'MapsModelToken';\r\nexports.COMPTE_MODEL_PROVIDER = 'CompteModelToken';\r\n\n\n//# sourceURL=webpack:///./src/constants.ts?");
 
 /***/ }),
 

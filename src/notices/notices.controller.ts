@@ -6,8 +6,6 @@ import { NoticeModel } from './interfaces/notice.interface';
 @Controller('notices')
 export class NoticesController {
     constructor(private readonly noticesService: NoticesService) { }
-
-    
     /**
      * Sélectionner toutes les notices une celles correspondant à la requête
      * @param req Requête reçue dans le corps

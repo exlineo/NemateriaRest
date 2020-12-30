@@ -1,6 +1,6 @@
 import { Document } from 'mongoose';
 export interface MapModel extends Document {
-    readonly _id: string;
+    readonly _id: any;
     readonly titre: string;
     readonly alias: string;
     readonly description: string;

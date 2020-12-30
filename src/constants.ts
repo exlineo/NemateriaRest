@@ -7,3 +7,4 @@ export const SETS_MODEL_PROVIDER = 'SetsModelToken';
 export const SCAN_MODEL_PROVIDER = 'ScanModelToken';
 export const FILTRES_MODEL_PROVIDER = 'FiltresModelToken';
 export const MAPS_MODEL_PROVIDER = 'MapsModelToken';
+export const COMPTE_MODEL_PROVIDER = 'CompteModelToken';
