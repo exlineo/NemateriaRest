@@ -19,13 +19,17 @@ export class ComptesService {
      * Valider l'identification d'un utilisateur
      */
     async verifie(id, pass): Promise<any> {
+        // Recherche de l'identifiant dans la base
         this.compte = await this.compteModel.findOne({ compte: id, mdp: pass });
         console.log("Retour base : ", this.compte);
         if (!this.compte) {
+            // Renvoyer une erreur
             throw new HttpException('LOGIN.USER_NOT_FOUND', HttpStatus.UNAUTHORIZED);
         } else {
+            // Retourner des données
             await this.jwtService.creeToken(this.compte.email, this.compte.statut);
-            return {compte:this.compte, token:this.jwtService.token};
+            console.log({compte:this.compte, token:this.jwtService.token});
+            return ({compte:this.compte, token:this.jwtService.token});
         };
     }
 }
