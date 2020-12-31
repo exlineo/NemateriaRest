@@ -1,6 +1,9 @@
+import { JwtService } from '../systeme/jwt.service';
 import { ComptesService } from './comptes.service';
 export declare class ComptesController {
     private readonly compteService;
-    constructor(compteService: ComptesService);
-    find(): Promise<any>;
+    private readonly jwtService;
+    constructor(compteService: ComptesService, jwtService: JwtService);
+    id(id: any, pass: any): Promise<any>;
+    idErreur(): Promise<string>;
 }

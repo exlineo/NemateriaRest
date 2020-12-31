@@ -1,11 +1,10 @@
 import { Controller, Get, Param, HttpStatus, HttpCode, HttpException } from '@nestjs/common';
-import { JwtService } from 'systeme/jwt.service';
+import { JwtService } from '../systeme/jwt.service';
 import { ComptesService } from './comptes.service';
 
 @Controller('comptes')
 export class ComptesController {
     constructor(private readonly compteService: ComptesService, private readonly jwtService:JwtService) { }
-    
     /**
      * Réception d'une tentative de connexion
      * @param id Identifiant de l'utilisateur

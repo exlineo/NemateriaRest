@@ -15,8 +15,6 @@
   \*******************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
-/*! CommonJS bailout: this is used directly at 8:18-22 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -30,11 +28,10 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
   \***************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.AppModule = void 0;\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nconst app_controller_1 = __webpack_require__(/*! ./app.controller */ \"./src/app.controller.ts\");\r\nconst app_service_1 = __webpack_require__(/*! ./app.service */ \"./src/app.service.ts\");\r\nconst collections_module_1 = __webpack_require__(/*! ./collections/collections.module */ \"./src/collections/collections.module.ts\");\r\nconst sets_module_1 = __webpack_require__(/*! ./sets/sets.module */ \"./src/sets/sets.module.ts\");\r\nconst notices_module_1 = __webpack_require__(/*! ./notices/notices.module */ \"./src/notices/notices.module.ts\");\r\nconst filtres_module_1 = __webpack_require__(/*! ./filtres/filtres.module */ \"./src/filtres/filtres.module.ts\");\r\nconst maps_module_1 = __webpack_require__(/*! ./mappage/maps.module */ \"./src/mappage/maps.module.ts\");\r\nconst scan_module_1 = __webpack_require__(/*! ./scan/scan.module */ \"./src/scan/scan.module.ts\");\r\nconst comptes_module_1 = __webpack_require__(/*! ./comptes/comptes.module */ \"./src/comptes/comptes.module.ts\");\r\nlet AppModule = class AppModule {\r\n};\r\nAppModule = __decorate([\r\n    common_1.Module({\r\n        imports: [collections_module_1.CollectionsModule, sets_module_1.SetsModule, notices_module_1.NoticesModule, scan_module_1.ScanModule, filtres_module_1.FiltresModule, maps_module_1.MapsModule, comptes_module_1.ComptesModule],\r\n        controllers: [app_controller_1.AppController],\r\n        providers: [app_service_1.AppService],\r\n    })\r\n], AppModule);\r\nexports.AppModule = AppModule;\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/app.module.ts?");
+eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.AppModule = void 0;\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nconst app_controller_1 = __webpack_require__(/*! ./app.controller */ \"./src/app.controller.ts\");\r\nconst app_service_1 = __webpack_require__(/*! ./app.service */ \"./src/app.service.ts\");\r\nconst collections_module_1 = __webpack_require__(/*! ./collections/collections.module */ \"./src/collections/collections.module.ts\");\r\nconst sets_module_1 = __webpack_require__(/*! ./sets/sets.module */ \"./src/sets/sets.module.ts\");\r\nconst notices_module_1 = __webpack_require__(/*! ./notices/notices.module */ \"./src/notices/notices.module.ts\");\r\nconst filtres_module_1 = __webpack_require__(/*! ./filtres/filtres.module */ \"./src/filtres/filtres.module.ts\");\r\nconst maps_module_1 = __webpack_require__(/*! ./mappage/maps.module */ \"./src/mappage/maps.module.ts\");\r\nconst scan_module_1 = __webpack_require__(/*! ./scan/scan.module */ \"./src/scan/scan.module.ts\");\r\nconst comptes_module_1 = __webpack_require__(/*! ./comptes/comptes.module */ \"./src/comptes/comptes.module.ts\");\r\nconst jwt_service_1 = __webpack_require__(/*! ./systeme/jwt.service */ \"./src/systeme/jwt.service.ts\");\r\nlet AppModule = class AppModule {\r\n};\r\nAppModule = __decorate([\r\n    common_1.Module({\r\n        imports: [collections_module_1.CollectionsModule, sets_module_1.SetsModule, notices_module_1.NoticesModule, scan_module_1.ScanModule, filtres_module_1.FiltresModule, maps_module_1.MapsModule, comptes_module_1.ComptesModule],\r\n        controllers: [app_controller_1.AppController],\r\n        providers: [app_service_1.AppService, jwt_service_1.JwtService],\r\n    })\r\n], AppModule);\r\nexports.AppModule = AppModule;\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/app.module.ts?");
 
 /***/ }),
 
@@ -44,7 +41,6 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
   \****************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -58,10 +54,6 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
   \***************************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
-/*! CommonJS bailout: this is used directly at 8:18-22 */
-/*! CommonJS bailout: this is used directly at 11:15-19 */
-/*! CommonJS bailout: this is used directly at 14:17-21 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -75,7 +67,6 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
   \***********************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -121,10 +112,6 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
   \************************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
-/*! CommonJS bailout: this is used directly at 8:18-22 */
-/*! CommonJS bailout: this is used directly at 11:15-19 */
-/*! CommonJS bailout: this is used directly at 14:17-21 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -156,11 +143,12 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
 /*! CommonJS bailout: this is used directly at 2:18-22 */
 /*! CommonJS bailout: this is used directly at 8:18-22 */
-/*! CommonJS bailout: this is used directly at 11:17-21 */
+/*! CommonJS bailout: this is used directly at 11:15-19 */
+/*! CommonJS bailout: this is used directly at 14:17-21 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nvar __metadata = (this && this.__metadata) || function (k, v) {\r\n    if (typeof Reflect === \"object\" && typeof Reflect.metadata === \"function\") return Reflect.metadata(k, v);\r\n};\r\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\r\n    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }\r\n    return new (P || (P = Promise))(function (resolve, reject) {\r\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\r\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\r\n        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }\r\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\r\n    });\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.ComptesController = void 0;\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nconst comptes_service_1 = __webpack_require__(/*! ./comptes.service */ \"./src/comptes/comptes.service.ts\");\r\nlet ComptesController = class ComptesController {\r\n    constructor(compteService) {\r\n        this.compteService = compteService;\r\n    }\r\n    find() {\r\n        return __awaiter(this, void 0, void 0, function* () {\r\n        });\r\n    }\r\n};\r\n__decorate([\r\n    common_1.Get(),\r\n    __metadata(\"design:type\", Function),\r\n    __metadata(\"design:paramtypes\", []),\r\n    __metadata(\"design:returntype\", Promise)\r\n], ComptesController.prototype, \"find\", null);\r\nComptesController = __decorate([\r\n    common_1.Controller('comptes'),\r\n    __metadata(\"design:paramtypes\", [comptes_service_1.ComptesService])\r\n], ComptesController);\r\nexports.ComptesController = ComptesController;\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/comptes/comptes.controller.ts?");
+eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nvar __metadata = (this && this.__metadata) || function (k, v) {\r\n    if (typeof Reflect === \"object\" && typeof Reflect.metadata === \"function\") return Reflect.metadata(k, v);\r\n};\r\nvar __param = (this && this.__param) || function (paramIndex, decorator) {\r\n    return function (target, key) { decorator(target, key, paramIndex); }\r\n};\r\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\r\n    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }\r\n    return new (P || (P = Promise))(function (resolve, reject) {\r\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\r\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\r\n        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }\r\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\r\n    });\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.ComptesController = void 0;\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nconst jwt_service_1 = __webpack_require__(/*! ../systeme/jwt.service */ \"./src/systeme/jwt.service.ts\");\r\nconst comptes_service_1 = __webpack_require__(/*! ./comptes.service */ \"./src/comptes/comptes.service.ts\");\r\nlet ComptesController = class ComptesController {\r\n    constructor(compteService, jwtService) {\r\n        this.compteService = compteService;\r\n        this.jwtService = jwtService;\r\n    }\r\n    id(id, pass) {\r\n        return __awaiter(this, void 0, void 0, function* () {\r\n            try {\r\n                let response = yield this.compteService.verifie(id, pass);\r\n                return (response);\r\n            }\r\n            catch (error) {\r\n                return (error);\r\n            }\r\n        });\r\n    }\r\n    idErreur() {\r\n        return __awaiter(this, void 0, void 0, function* () {\r\n            throw new common_1.HttpException('LOGIN.NO_CONNECTION', common_1.HttpStatus.UNAUTHORIZED);\r\n            return yield \"Erreur de connexion\";\r\n        });\r\n    }\r\n};\r\n__decorate([\r\n    common_1.Get(':id/:pass'),\r\n    common_1.HttpCode(common_1.HttpStatus.OK),\r\n    __param(0, common_1.Param('id')), __param(1, common_1.Param('pass')),\r\n    __metadata(\"design:type\", Function),\r\n    __metadata(\"design:paramtypes\", [Object, Object]),\r\n    __metadata(\"design:returntype\", Promise)\r\n], ComptesController.prototype, \"id\", null);\r\n__decorate([\r\n    common_1.Get('*'),\r\n    __metadata(\"design:type\", Function),\r\n    __metadata(\"design:paramtypes\", []),\r\n    __metadata(\"design:returntype\", Promise)\r\n], ComptesController.prototype, \"idErreur\", null);\r\nComptesController = __decorate([\r\n    common_1.Controller('comptes'),\r\n    __metadata(\"design:paramtypes\", [comptes_service_1.ComptesService, jwt_service_1.JwtService])\r\n], ComptesController);\r\nexports.ComptesController = ComptesController;\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/comptes/comptes.controller.ts?");
 
 /***/ }),
 
@@ -174,7 +162,7 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.ComptesModule = void 0;\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nconst comptes_controller_1 = __webpack_require__(/*! ./comptes.controller */ \"./src/comptes/comptes.controller.ts\");\r\nconst comptes_service_1 = __webpack_require__(/*! ./comptes.service */ \"./src/comptes/comptes.service.ts\");\r\nconst comptes_providers_1 = __webpack_require__(/*! ./comptes.providers */ \"./src/comptes/comptes.providers.ts\");\r\nconst database_module_1 = __webpack_require__(/*! ../db/database.module */ \"./src/db/database.module.ts\");\r\nlet ComptesModule = class ComptesModule {\r\n};\r\nComptesModule = __decorate([\r\n    common_1.Module({\r\n        imports: [database_module_1.DatabaseModule],\r\n        controllers: [comptes_controller_1.ComptesController],\r\n        providers: [comptes_service_1.ComptesService, ...comptes_providers_1.comptesProviders]\r\n    })\r\n], ComptesModule);\r\nexports.ComptesModule = ComptesModule;\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/comptes/comptes.module.ts?");
+eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.ComptesModule = void 0;\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nconst comptes_controller_1 = __webpack_require__(/*! ./comptes.controller */ \"./src/comptes/comptes.controller.ts\");\r\nconst comptes_service_1 = __webpack_require__(/*! ./comptes.service */ \"./src/comptes/comptes.service.ts\");\r\nconst comptes_providers_1 = __webpack_require__(/*! ./comptes.providers */ \"./src/comptes/comptes.providers.ts\");\r\nconst database_module_1 = __webpack_require__(/*! ../db/database.module */ \"./src/db/database.module.ts\");\r\nconst jwt_service_1 = __webpack_require__(/*! ../systeme/jwt.service */ \"./src/systeme/jwt.service.ts\");\r\nlet ComptesModule = class ComptesModule {\r\n};\r\nComptesModule = __decorate([\r\n    common_1.Module({\r\n        imports: [database_module_1.DatabaseModule],\r\n        controllers: [comptes_controller_1.ComptesController],\r\n        providers: [comptes_service_1.ComptesService, ...comptes_providers_1.comptesProviders, jwt_service_1.JwtService]\r\n    })\r\n], ComptesModule);\r\nexports.ComptesModule = ComptesModule;\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/comptes/comptes.module.ts?");
 
 /***/ }),
 
@@ -190,7 +178,7 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.comptesProviders = void 0;\r\nconst comptes_schema_1 = __webpack_require__(/*! ./comptes.schema */ \"./src/comptes/comptes.schema.ts\");\r\nconst constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\r\nexports.comptesProviders = [\r\n    {\r\n        provide: constants_1.COMPTES_MODEL_PROVIDER,\r\n        useFactory: (connection) => connection.model('Compte', comptes_schema_1.CompteSchema),\r\n        inject: [constants_1.DB_PROVIDER],\r\n    },\r\n];\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/comptes/comptes.providers.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.comptesProviders = void 0;\r\nconst comptes_schema_1 = __webpack_require__(/*! ./comptes.schema */ \"./src/comptes/comptes.schema.ts\");\r\nconst constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\r\nexports.comptesProviders = [\r\n    {\r\n        provide: constants_1.COMPTES_MODEL_PROVIDER,\r\n        useFactory: (connection) => connection.model('Compte', comptes_schema_1.CompteSchema),\r\n        inject: [constants_1.DB_PROVIDER]\r\n    },\r\n];\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/comptes/comptes.providers.ts?");
 
 /***/ }),
 
@@ -216,13 +204,10 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
   \****************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
-/*! CommonJS bailout: this is used directly at 8:18-22 */
-/*! CommonJS bailout: this is used directly at 11:15-19 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nvar __metadata = (this && this.__metadata) || function (k, v) {\r\n    if (typeof Reflect === \"object\" && typeof Reflect.metadata === \"function\") return Reflect.metadata(k, v);\r\n};\r\nvar __param = (this && this.__param) || function (paramIndex, decorator) {\r\n    return function (target, key) { decorator(target, key, paramIndex); }\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.ComptesService = void 0;\r\nconst mongoose_1 = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nconst constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\r\nlet ComptesService = class ComptesService {\r\n    constructor(compteModel) {\r\n        this.compteModel = compteModel;\r\n    }\r\n};\r\nComptesService = __decorate([\r\n    common_1.Injectable(),\r\n    __param(0, common_1.Inject(constants_1.COMPTES_MODEL_PROVIDER)),\r\n    __metadata(\"design:paramtypes\", [mongoose_1.Model])\r\n], ComptesService);\r\nexports.ComptesService = ComptesService;\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/comptes/comptes.service.ts?");
+eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nvar __metadata = (this && this.__metadata) || function (k, v) {\r\n    if (typeof Reflect === \"object\" && typeof Reflect.metadata === \"function\") return Reflect.metadata(k, v);\r\n};\r\nvar __param = (this && this.__param) || function (paramIndex, decorator) {\r\n    return function (target, key) { decorator(target, key, paramIndex); }\r\n};\r\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\r\n    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }\r\n    return new (P || (P = Promise))(function (resolve, reject) {\r\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\r\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\r\n        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }\r\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\r\n    });\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.ComptesService = void 0;\r\nconst mongoose_1 = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nconst bcrypt = __webpack_require__(/*! bcryptjs */ \"bcryptjs\");\r\nconst jwt_service_1 = __webpack_require__(/*! ../systeme/jwt.service */ \"./src/systeme/jwt.service.ts\");\r\nconst constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\r\nlet ComptesService = class ComptesService {\r\n    constructor(compteModel, jwtService) {\r\n        this.compteModel = compteModel;\r\n        this.jwtService = jwtService;\r\n    }\r\n    verifie(id, pass) {\r\n        return __awaiter(this, void 0, void 0, function* () {\r\n            this.compte = yield this.compteModel.findOne({ compte: id, mdp: pass });\r\n            if (!this.compte) {\r\n                throw new common_1.HttpException('LOGIN.USER_NOT_FOUND', common_1.HttpStatus.UNAUTHORIZED);\r\n            }\r\n            else {\r\n                return this.jwtService.creeToken(this.compte.email, this.compte.statut);\r\n            }\r\n            ;\r\n            return null;\r\n        });\r\n    }\r\n    valideCompte(id, pass) {\r\n        return __awaiter(this, void 0, void 0, function* () {\r\n            this.compte = yield this.compteModel.findOne({ compte: id, mdp: pass });\r\n            if (!this.compte)\r\n                throw new common_1.HttpException('LOGIN.USER_NOT_FOUND', common_1.HttpStatus.UNAUTHORIZED);\r\n            let isValidPass = yield bcrypt.compare(pass, this.compte.mdp);\r\n        });\r\n    }\r\n};\r\nComptesService = __decorate([\r\n    common_1.Injectable(),\r\n    __param(0, common_1.Inject(constants_1.COMPTES_MODEL_PROVIDER)),\r\n    __metadata(\"design:paramtypes\", [mongoose_1.Model, jwt_service_1.JwtService])\r\n], ComptesService);\r\nexports.ComptesService = ComptesService;\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/comptes/comptes.service.ts?");
 
 /***/ }),
 
@@ -232,6 +217,7 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
   \***********************/
 /*! flagged exports */
 /*! export CONFIG_ADR [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export JWT_CONFIG [provided] [no usage info] [missing usage info prevents renaming] */
 /*! export SCAN_ADR [provided] [no usage info] [missing usage info prevents renaming] */
 /*! export __esModule [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
@@ -239,7 +225,7 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.SCAN_ADR = exports.CONFIG_ADR = void 0;\r\nexports.CONFIG_ADR = 'mongodb://admin:exlineo@localhost:27017/nemateria?authSource=admin';\r\nexports.SCAN_ADR = '/var/www/html/collections/';\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/config.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.JWT_CONFIG = exports.SCAN_ADR = exports.CONFIG_ADR = void 0;\r\nexports.CONFIG_ADR = 'mongodb://admin:exlineo@localhost:27017/nemateria?authSource=admin';\r\nexports.SCAN_ADR = '/var/www/html/collections/';\r\nexports.JWT_CONFIG = { \"secret\": \"CollectionsImmaterielles\", \"expiration\": 36000000 };\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/config.ts?");
 
 /***/ }),
 
@@ -274,7 +260,6 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
   \***********************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -288,7 +273,6 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
   \**************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:17-21 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -318,10 +302,6 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
   \*******************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
-/*! CommonJS bailout: this is used directly at 8:18-22 */
-/*! CommonJS bailout: this is used directly at 11:15-19 */
-/*! CommonJS bailout: this is used directly at 14:17-21 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -335,7 +315,6 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
   \***************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -381,10 +360,6 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
   \****************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
-/*! CommonJS bailout: this is used directly at 8:18-22 */
-/*! CommonJS bailout: this is used directly at 11:15-19 */
-/*! CommonJS bailout: this is used directly at 14:17-21 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -398,7 +373,6 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
   \*************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__, module */
-/*! CommonJS bailout: this is used directly at 2:17-21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -428,10 +402,6 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
   \****************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
-/*! CommonJS bailout: this is used directly at 8:18-22 */
-/*! CommonJS bailout: this is used directly at 11:15-19 */
-/*! CommonJS bailout: this is used directly at 14:17-21 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -445,7 +415,6 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
   \************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -491,10 +460,6 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
   \*************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
-/*! CommonJS bailout: this is used directly at 8:18-22 */
-/*! CommonJS bailout: this is used directly at 11:15-19 */
-/*! CommonJS bailout: this is used directly at 14:17-21 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -524,10 +489,6 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
   \*******************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
-/*! CommonJS bailout: this is used directly at 8:18-22 */
-/*! CommonJS bailout: this is used directly at 11:15-19 */
-/*! CommonJS bailout: this is used directly at 14:17-21 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -541,7 +502,6 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
   \***************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -587,10 +547,6 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
   \****************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
-/*! CommonJS bailout: this is used directly at 8:18-22 */
-/*! CommonJS bailout: this is used directly at 11:15-19 */
-/*! CommonJS bailout: this is used directly at 14:17-21 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -604,10 +560,6 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
   \*************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
-/*! CommonJS bailout: this is used directly at 8:18-22 */
-/*! CommonJS bailout: this is used directly at 11:15-19 */
-/*! CommonJS bailout: this is used directly at 14:17-21 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -621,7 +573,6 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
   \*********************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -667,10 +618,6 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
   \**********************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
-/*! CommonJS bailout: this is used directly at 8:18-22 */
-/*! CommonJS bailout: this is used directly at 11:15-19 */
-/*! CommonJS bailout: this is used directly at 14:17-21 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -700,10 +647,6 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
   \*************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
-/*! CommonJS bailout: this is used directly at 8:18-22 */
-/*! CommonJS bailout: this is used directly at 11:15-19 */
-/*! CommonJS bailout: this is used directly at 14:17-21 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -717,7 +660,6 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
   \*********************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -763,14 +705,23 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
   \**********************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: this is used directly at 2:18-22 */
-/*! CommonJS bailout: this is used directly at 8:18-22 */
-/*! CommonJS bailout: this is used directly at 11:15-19 */
-/*! CommonJS bailout: this is used directly at 14:17-21 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nvar __metadata = (this && this.__metadata) || function (k, v) {\r\n    if (typeof Reflect === \"object\" && typeof Reflect.metadata === \"function\") return Reflect.metadata(k, v);\r\n};\r\nvar __param = (this && this.__param) || function (paramIndex, decorator) {\r\n    return function (target, key) { decorator(target, key, paramIndex); }\r\n};\r\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\r\n    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }\r\n    return new (P || (P = Promise))(function (resolve, reject) {\r\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\r\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\r\n        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }\r\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\r\n    });\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.SetsService = void 0;\r\nconst mongoose_1 = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nconst constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\r\nlet SetsService = class SetsService {\r\n    constructor(setModel) {\r\n        this.setModel = setModel;\r\n    }\r\n    create(createSetDto) {\r\n        return __awaiter(this, void 0, void 0, function* () {\r\n            const createdSet = new this.setModel(createSetDto);\r\n            return yield createdSet.save();\r\n        });\r\n    }\r\n    findAll() {\r\n        return __awaiter(this, void 0, void 0, function* () {\r\n            return yield this.setModel.find().exec();\r\n        });\r\n    }\r\n    findUn(id) {\r\n        return __awaiter(this, void 0, void 0, function* () {\r\n            return yield this.setModel.findById(id).exec();\r\n        });\r\n    }\r\n    updateUn(id, set) {\r\n        return __awaiter(this, void 0, void 0, function* () {\r\n            return yield this.setModel.findByIdAndUpdate(id, set).exec();\r\n        });\r\n    }\r\n    deleteUn(id) {\r\n        return __awaiter(this, void 0, void 0, function* () {\r\n            return yield this.setModel.findByIdAndDelete(id).exec();\r\n        });\r\n    }\r\n};\r\nSetsService = __decorate([\r\n    common_1.Injectable(),\r\n    __param(0, common_1.Inject(constants_1.SETS_MODEL_PROVIDER)),\r\n    __metadata(\"design:paramtypes\", [mongoose_1.Model])\r\n], SetsService);\r\nexports.SetsService = SetsService;\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/sets/sets.service.ts?");
+
+/***/ }),
+
+/***/ "./src/systeme/jwt.service.ts":
+/*!************************************!*\
+  !*** ./src/systeme/jwt.service.ts ***!
+  \************************************/
+/*! unknown exports (runtime-defined) */
+/*! runtime requirements: top-level-this-exports, __webpack_exports__, __webpack_require__ */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n};\r\nvar __metadata = (this && this.__metadata) || function (k, v) {\r\n    if (typeof Reflect === \"object\" && typeof Reflect.metadata === \"function\") return Reflect.metadata(k, v);\r\n};\r\nvar __param = (this && this.__param) || function (paramIndex, decorator) {\r\n    return function (target, key) { decorator(target, key, paramIndex); }\r\n};\r\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\r\n    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }\r\n    return new (P || (P = Promise))(function (resolve, reject) {\r\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\r\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\r\n        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }\r\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\r\n    });\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.JwtService = void 0;\r\nconst common_1 = __webpack_require__(/*! @nestjs/common */ \"@nestjs/common\");\r\nconst mongoose_1 = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nconst jwt = __webpack_require__(/*! jsonwebtoken */ \"jsonwebtoken\");\r\nconst constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\r\nconst config_1 = __webpack_require__(/*! ../config */ \"./src/config.ts\");\r\nlet JwtService = class JwtService {\r\n    constructor(compteModel) {\r\n        this.compteModel = compteModel;\r\n    }\r\n    creeToken(email, statut) {\r\n        return __awaiter(this, void 0, void 0, function* () {\r\n            const expire = config_1.JWT_CONFIG.expiration, secret = config_1.JWT_CONFIG.secret;\r\n            const userInfo = { email: email, statut: statut };\r\n            this.token = jwt.sign(userInfo, secret, { expire });\r\n            return this.token;\r\n            return {\r\n                expiration: expire,\r\n                token_acces: this.token\r\n            };\r\n        });\r\n    }\r\n};\r\nJwtService = __decorate([\r\n    common_1.Injectable(),\r\n    __param(0, common_1.Inject(constants_1.COMPTES_MODEL_PROVIDER)),\r\n    __metadata(\"design:paramtypes\", [mongoose_1.Model])\r\n], JwtService);\r\nexports.JwtService = JwtService;\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/systeme/jwt.service.ts?");
 
 /***/ }),
 
@@ -780,7 +731,6 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
   \******************************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\nmodule.exports = function (updatedModules, renewedModules) {\n\tvar unacceptedModules = updatedModules.filter(function (moduleId) {\n\t\treturn renewedModules && renewedModules.indexOf(moduleId) < 0;\n\t});\n\tvar log = __webpack_require__(/*! ./log */ \"./node_modules/webpack/hot/log.js\");\n\n\tif (unacceptedModules.length > 0) {\n\t\tlog(\n\t\t\t\"warning\",\n\t\t\t\"[HMR] The following modules couldn't be hot updated: (They would need a full reload!)\"\n\t\t);\n\t\tunacceptedModules.forEach(function (moduleId) {\n\t\t\tlog(\"warning\", \"[HMR]  - \" + moduleId);\n\t\t});\n\t}\n\n\tif (!renewedModules || renewedModules.length === 0) {\n\t\tlog(\"info\", \"[HMR] Nothing hot updated.\");\n\t} else {\n\t\tlog(\"info\", \"[HMR] Updated modules:\");\n\t\trenewedModules.forEach(function (moduleId) {\n\t\t\tif (typeof moduleId === \"string\" && moduleId.indexOf(\"!\") !== -1) {\n\t\t\t\tvar parts = moduleId.split(\"!\");\n\t\t\t\tlog.groupCollapsed(\"info\", \"[HMR]  - \" + parts.pop());\n\t\t\t\tlog(\"info\", \"[HMR]  - \" + moduleId);\n\t\t\t\tlog.groupEnd(\"info\");\n\t\t\t} else {\n\t\t\t\tlog(\"info\", \"[HMR]  - \" + moduleId);\n\t\t\t}\n\t\t});\n\t\tvar numberIds = renewedModules.every(function (moduleId) {\n\t\t\treturn typeof moduleId === \"number\";\n\t\t});\n\t\tif (numberIds)\n\t\t\tlog(\n\t\t\t\t\"info\",\n\t\t\t\t'[HMR] Consider using the optimization.moduleIds: \"named\" for module names.'\n\t\t\t);\n\t}\n};\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./node_modules/webpack/hot/log-apply-result.js?");
@@ -793,7 +743,6 @@ eval("/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAu
   \*****************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 21:0-14 */
 /***/ ((module) => {
 
 eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(level) {\n\tvar shouldLog =\n\t\t(logLevel === \"info\" && level === \"info\") ||\n\t\t([\"info\", \"warning\"].indexOf(logLevel) >= 0 && level === \"warning\") ||\n\t\t([\"info\", \"warning\", \"error\"].indexOf(logLevel) >= 0 && level === \"error\");\n\treturn shouldLog;\n}\n\nfunction logGroup(logFn) {\n\treturn function (level, msg) {\n\t\tif (shouldLog(level)) {\n\t\t\tlogFn(msg);\n\t\t}\n\t};\n}\n\nmodule.exports = function (level, msg) {\n\tif (shouldLog(level)) {\n\t\tif (level === \"info\") {\n\t\t\tconsole.log(msg);\n\t\t} else if (level === \"warning\") {\n\t\t\tconsole.warn(msg);\n\t\t} else if (level === \"error\") {\n\t\t\tconsole.error(msg);\n\t\t}\n\t}\n};\n\n/* eslint-disable node/no-unsupported-features/node-builtins */\nvar group = console.group || dummy;\nvar groupCollapsed = console.groupCollapsed || dummy;\nvar groupEnd = console.groupEnd || dummy;\n/* eslint-enable node/no-unsupported-features/node-builtins */\n\nmodule.exports.group = logGroup(group);\n\nmodule.exports.groupCollapsed = logGroup(groupCollapsed);\n\nmodule.exports.groupEnd = logGroup(groupEnd);\n\nmodule.exports.setLogLevel = function (level) {\n\tlogLevel = level;\n};\n\nmodule.exports.formatError = function (err) {\n\tvar message = err.message;\n\tvar stack = err.stack;\n\tif (!stack) {\n\t\treturn message;\n\t} else if (stack.indexOf(message) < 0) {\n\t\treturn message + \"\\n\" + stack;\n\t} else {\n\t\treturn stack;\n\t}\n};\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./node_modules/webpack/hot/log.js?");
@@ -840,6 +789,20 @@ eval("module.exports = require(\"@nestjs/core\");;\n\n//# sourceURL=webpack://ne
 
 /***/ }),
 
+/***/ "bcryptjs":
+/*!***************************!*\
+  !*** external "bcryptjs" ***!
+  \***************************/
+/*! dynamic exports */
+/*! exports [maybe provided (runtime-defined)] [no usage info] */
+/*! runtime requirements: module */
+/***/ ((module) => {
+
+"use strict";
+eval("module.exports = require(\"bcryptjs\");;\n\n//# sourceURL=webpack://nemateria-oai-pmh/external_%22bcryptjs%22?");
+
+/***/ }),
+
 /***/ "fs":
 /*!*********************!*\
   !*** external "fs" ***!
@@ -851,6 +814,20 @@ eval("module.exports = require(\"@nestjs/core\");;\n\n//# sourceURL=webpack://ne
 
 "use strict";
 eval("module.exports = require(\"fs\");;\n\n//# sourceURL=webpack://nemateria-oai-pmh/external_%22fs%22?");
+
+/***/ }),
+
+/***/ "jsonwebtoken":
+/*!*******************************!*\
+  !*** external "jsonwebtoken" ***!
+  \*******************************/
+/*! dynamic exports */
+/*! exports [maybe provided (runtime-defined)] [no usage info] */
+/*! runtime requirements: module */
+/***/ ((module) => {
+
+"use strict";
+eval("module.exports = require(\"jsonwebtoken\");;\n\n//# sourceURL=webpack://nemateria-oai-pmh/external_%22jsonwebtoken%22?");
 
 /***/ }),
 
@@ -936,7 +913,7 @@ eval("module.exports = require(\"node-exiftool\");;\n\n//# sourceURL=webpack://n
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "f0067010777622ac5b28"
+/******/ 		__webpack_require__.h = () => "1e5c84b5a3e9877ea097"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */

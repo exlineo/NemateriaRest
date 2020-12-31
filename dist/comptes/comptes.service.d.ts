@@ -1,6 +1,11 @@
 import { Model } from 'mongoose';
+import { JwtService } from '../systeme/jwt.service';
 import { CompteModel } from './interfaces/compte.interface';
 export declare class ComptesService {
     private readonly compteModel;
-    constructor(compteModel: Model<CompteModel>);
+    private readonly jwtService;
+    compte: CompteModel;
+    constructor(compteModel: Model<CompteModel>, jwtService: JwtService);
+    verifie(id: any, pass: any): Promise<any>;
+    valideCompte(id: any, pass: any): Promise<void>;
 }
