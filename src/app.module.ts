@@ -9,13 +9,9 @@ import { FiltresModule } from './filtres/filtres.module';
 import { MapsModule } from './mappage/maps.module';
 import { ScanModule } from './scan/scan.module';
 import { ComptesModule } from './comptes/comptes.module';
-import { JwtService } from './systeme/jwt.service';
-// Serveur REST
-// Module WebSocket
-
 @Module({
   imports: [CollectionsModule, SetsModule, NoticesModule, ScanModule, FiltresModule, MapsModule, ComptesModule],
   controllers: [AppController],
-  providers: [AppService, JwtService],
+  providers: [AppService],
 })
 export class AppModule {}

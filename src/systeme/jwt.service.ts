@@ -24,10 +24,10 @@ export class JwtService {
         const userInfo = { email: email, statut: statut};
         this.token = jwt.sign(userInfo, secret, { expire });
         return this.token;
-        return {
-          expiration: expire,
-          token_acces: this.token
-        };
+        // return {
+        //   expiration: expire,
+        //   token_acces: this.token
+        // };
       }
       /**
        * Valider un compte utilisateur
