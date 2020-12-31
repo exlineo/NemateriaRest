@@ -19,10 +19,10 @@ export class JwtService {
      * @param roles Statut de l'utilisateur
      */
     async creeToken(email, statut) {
-        const expireIn = JWT_CONFIG.expiration,
+        const expiresIn = JWT_CONFIG.expiration,
           secret = JWT_CONFIG.secret;
         const userInfo = { email: email, statut: statut};
-        this.token = jwt.sign(userInfo, secret, { expireIn });
+        this.token = jwt.sign(userInfo, secret, { expiresIn });
         console.log("Token généré", this.token);
         // return this.token;
         // return {
