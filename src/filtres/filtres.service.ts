@@ -5,7 +5,6 @@ import { FILTRES_MODEL_PROVIDER } from '../constants';
 import { FiltreDto } from './dto/filtre.dto';
 import { FiltreModel } from './interfaces/filtre.interface';
 
-
 @Injectable()
 export class FiltresService {
     constructor(@Inject(FILTRES_MODEL_PROVIDER) private readonly filtreModel: Model<FiltreModel>) { }

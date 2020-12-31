@@ -7,6 +7,6 @@ export const comptesProviders = [
     {
         provide: COMPTES_MODEL_PROVIDER,
         useFactory: (connection: Connection) => connection.model('Compte', CompteSchema),
-        inject: [DB_PROVIDER],
+        inject: [DB_PROVIDER]
     },
 ];
