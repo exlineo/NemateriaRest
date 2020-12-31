@@ -4,5 +4,5 @@ export declare class JwtService {
     private readonly compteModel;
     token: any;
     constructor(compteModel: Model<CompteModel>);
-    creeToken(email: any, statut: any): Promise<any>;
+    creeToken(email: any, statut: any): Promise<void>;
 }

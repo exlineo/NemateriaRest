@@ -24,7 +24,7 @@ export class JwtService {
         const userInfo = { email: email, statut: statut};
         this.token = jwt.sign(userInfo, secret, { expire });
         console.log("Token généré", this.token);
-        return this.token;
+        // return this.token;
         // return {
         //   expiration: expire,
         //   token_acces: this.token

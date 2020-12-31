@@ -7,5 +7,4 @@ export declare class ComptesService {
     compte: CompteModel;
     constructor(compteModel: Model<CompteModel>, jwtService: JwtService);
     verifie(id: any, pass: any): Promise<any>;
-    valideCompte(id: any, pass: any): Promise<void>;
 }
