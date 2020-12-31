@@ -15,8 +15,10 @@ export class ComptesController {
     async id(@Param('id') id, @Param('pass') pass): Promise<any> {
         try {
             let response = await this.compteService.verifie(id, pass);
+            console.log("Identification réussie", response);
             return (response);
         } catch (error) {
+            console.log("Erreu d'identification : ", error);
             return (error);
         }
     }

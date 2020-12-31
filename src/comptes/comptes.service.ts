@@ -13,13 +13,14 @@ import { COMPTES_MODEL_PROVIDER } from '../constants';
 export class ComptesService {
 
     compte: CompteModel;
-
+    
     constructor(@Inject(COMPTES_MODEL_PROVIDER) private readonly compteModel: Model<CompteModel>, private readonly jwtService: JwtService) { }
     /**
      * Valider l'identification d'un utilisateur
      */
     async verifie(id, pass): Promise<any> {
         this.compte = await this.compteModel.findOne({ compte: id, mdp: pass });
+        console.log("Retour base : ", this.compte);
         if (!this.compte) {
             throw new HttpException('LOGIN.USER_NOT_FOUND', HttpStatus.UNAUTHORIZED);
         } else {
