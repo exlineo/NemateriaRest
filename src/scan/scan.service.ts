@@ -10,7 +10,6 @@ import { SCAN_MODEL_PROVIDER } from '../constants';
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { async } from 'rxjs/internal/scheduler/async';
 
 // const { readdir, stat } = require("fs").promises;
 /// const { join } = require("path");
@@ -34,6 +33,7 @@ export class ScanService {
                     reject(err); 
                 } else {
                     resolve(dir);
+                    console.log("resolve dir ", dir);
                 }
             });
         });
@@ -46,6 +46,7 @@ export class ScanService {
     async scanDir(dir) {
         dir = dir.replace('../', ''); // Petite sécurité sur la chaîne pour éviter des tentatives hasardeuses
         await this.exif.open()
+            // .then(() => this.readDir(dir))
             .then(() => this.readDir(dir))
             .then(() => this.exif.close())
             .catch(console.error);
@@ -53,11 +54,11 @@ export class ScanService {
         return this.metas;
     }
     /**
-     * Lecture de métadonnées dans un dossier donnée
+     * Lecture de métadonnées dans un fichier donné
      * @param dir Dossier de scan
      */
     async readDir(dir): Promise<any> {
-        await this.exif.readMetadata(SCAN_ADR + dir, ['-File:all'])
+        await this.exif.readMetadata(SCAN_ADR + dir, ['-File:all', '-g'])
             .then(data => {
                 this.metas = data;
             })
@@ -69,7 +70,7 @@ export class ScanService {
     async scanFichier(fichier) {
         fichier = fichier.replace('../', ''); // Petite sécurité sur la chaîne pour éviter des tentatives hasardeuses
         await this.exif.open()
-            .then(() => this.readFIchier(fichier))
+            .then(() => this.readFichier(fichier))
             .then(() => this.exif.close())
             .catch(console.error);
 
@@ -79,7 +80,7 @@ export class ScanService {
      * Lire les métadonnées d'un fichier
      * @param fichier Fichier dont les métadonnées doivent être extraites
      */
-    async readFIchier(fichier): Promise<any> {
+    async readFichier(fichier): Promise<any> {
         await this.exif.readMetadata(fichier, ['-File:all'])
             .then(data => {
                 this.metas = data;

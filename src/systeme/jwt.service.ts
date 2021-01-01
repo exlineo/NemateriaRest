@@ -23,23 +23,5 @@ export class JwtService {
           secret = JWT_CONFIG.secret;
         const userInfo = { email: email, statut: statut};
         this.token = jwt.sign(userInfo, secret, { expiresIn });
-        console.log("Token généré", this.token);
-        // return this.token;
-        // return {
-        //   expiration: expire,
-        //   token_acces: this.token
-        // };
       }
-      /**
-       * Valider un compte utilisateur
-        * @param id Identifiant de l'utilisateur
-        * @param pass Mot de passe de l'utilisateur
-       */
-    //   async valideCompte(id, pass): Promise<CompteModel> {
-    //     let compte = await this.compteModel.findOne({ compte:id, mdp:pass});
-    //     if (compte) {
-    //         return compte;
-    //     }
-    //     return null;
-    //   }
 }

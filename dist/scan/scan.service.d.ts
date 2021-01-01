@@ -12,5 +12,5 @@ export declare class ScanService {
     scanDir(dir: any): Promise<any>;
     readDir(dir: any): Promise<any>;
     scanFichier(fichier: any): Promise<any>;
-    readFIchier(fichier: any): Promise<any>;
+    readFichier(fichier: any): Promise<any>;
 }
