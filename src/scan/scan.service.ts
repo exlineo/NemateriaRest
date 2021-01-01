@@ -55,10 +55,11 @@ export class ScanService {
     }
     /**
      * Lecture de métadonnées dans un fichier donné
+     * Lien vers les options disponibles : http://web.mit.edu/jhawk/mnt/cgs/Image-ExifTool-6.99/html/exiftool_pod.html
      * @param dir Dossier de scan
      */
     async readDir(dir): Promise<any> {
-        await this.exif.readMetadata(SCAN_ADR + dir, ['-File:all', '-g'])
+        await this.exif.readMetadata(SCAN_ADR + dir, ['-File:all', '-G2'])
             .then(data => {
                 this.metas = data;
             })
