@@ -10,8 +10,8 @@ export class SetsController {
      * Créer une nouvelle collection
      */
     @Post()
-    async create(@Body() creeSetDto: CreateSetDto) {
-        this.setsService.create(creeSetDto);
+    async cree(@Body() creeSet:CreateSetDto) {
+        this.setsService.cree(creeSet);
     }
     /**
      * Récupérer l'ensemble des sets

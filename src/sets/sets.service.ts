@@ -13,7 +13,7 @@ export class SetsService {
      * Créer une collection
      * @param createSetDto forme de la set à transmettre
      */
-    async create(createSetDto: CreateSetDto): Promise<SetModel> {
+    async cree(createSetDto: any): Promise<SetModel> {
         const createdSet = new this.setModel(createSetDto);
         return await createdSet.save();
     }
