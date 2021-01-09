@@ -3,7 +3,7 @@ import * as mongoose from 'mongoose';
 export const SetSchema = new mongoose.Schema({
     _id: {
         type: mongoose.SchemaTypes.ObjectId,
-        required: true,
+        required: false,
     },
     titre: {
         type: String,
@@ -11,26 +11,30 @@ export const SetSchema = new mongoose.Schema({
     },
     alias: {
         type: String,
+        required: true,
+    },
+    fond: {
+        type: String,
         required: false,
     },
     description: {
         type: String,
-        required: true,
+        required: false,
     },
-    type: {
-        type: String,
-        required: true,
+    date: {
+        type: Date,
+        required: false,
     },
     createur: {
         type: String,
+        required: false,
+    },
+    gestionnaire: {
+        type: String,
+        required: false,
+    },
+    documents: {
+        type: Array,
         required: true,
     },
-    appartient: {
-        type: String,
-        required: true,
-    },
-    langue: {
-        type: String,
-        required: true,
-    }
 });
