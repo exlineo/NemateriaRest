@@ -12,7 +12,7 @@ export class SetsController {
     @Post()
     async cree(@Body() creeSet:CreateSetDto) {
         if(!creeSet._id){
-            this.setsService.cree(creeSet);
+            return this.setsService.cree(creeSet);
         }else{
             throw new HttpException({
                 status: HttpStatus.FORBIDDEN,
