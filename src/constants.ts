@@ -4,6 +4,7 @@ export const JEU_MODEL_PROVIDER = 'JeuModelToken';
 export const NOTICES_MODEL_PROVIDER = 'NoticesModelToken';
 export const COLLECTIONS_MODEL_PROVIDER = 'CollectionsModelToken';
 export const SETS_MODEL_PROVIDER = 'SetsModelToken';
+export const FONDS_MODEL_PROVIDER = 'FondsModelToken';
 export const SCAN_MODEL_PROVIDER = 'ScanModelToken';
 export const FILTRES_MODEL_PROVIDER = 'FiltresModelToken';
 export const MAPS_MODEL_PROVIDER = 'MapsModelToken';

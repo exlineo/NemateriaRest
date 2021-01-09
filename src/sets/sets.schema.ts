@@ -1,10 +1,6 @@
 import * as mongoose from 'mongoose';
 
 export const SetSchema = new mongoose.Schema({
-    _id: {
-        type: mongoose.SchemaTypes.ObjectId,
-        required: false,
-    },
     titre: {
         type: String,
         required: true,

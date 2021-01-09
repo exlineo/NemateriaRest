@@ -1,5 +1,6 @@
+import { ObjectId } from "mongoose";
 export class CreateSetDto {
-    readonly _id: any;
+    _id: ObjectId;
     readonly titre:string;
     readonly alias:string;
     readonly fond:string;

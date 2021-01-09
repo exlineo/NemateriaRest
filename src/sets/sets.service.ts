@@ -1,4 +1,4 @@
-import { Model } from 'mongoose';
+import { Model, Schema } from 'mongoose';
 import { Injectable, Inject } from '@nestjs/common';
 
 import { SetModel } from './interfaces/set.interface';
@@ -14,7 +14,7 @@ export class SetsService {
      * @param createSetDto forme de la set à transmettre
      */
     async cree(createSetDto: CreateSetDto): Promise<SetModel> {
-        const createdSet = new this.setModel(createSetDto);
+        let createdSet = new this.setModel(createSetDto);
         // await createdSet.findById();
         return await createdSet.save();
     }
