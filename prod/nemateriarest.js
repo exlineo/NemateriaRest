@@ -207,7 +207,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.CompteSchema = void 0;\r\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nexports.CompteSchema = new mongoose.Schema({\r\n    _id: {\r\n        type: mongoose.SchemaTypes.ObjectId,\r\n        required: true,\r\n    },\r\n    nom: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    compte: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    mdp: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    description: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    email: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    statut: {\r\n        type: Number,\r\n        required: true,\r\n    }\r\n});\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/comptes/comptes.schema.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.CompteSchema = void 0;\r\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nexports.CompteSchema = new mongoose.Schema({\r\n    nom: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    compte: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    mdp: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    description: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    email: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    statut: {\r\n        type: Number,\r\n        required: true,\r\n    }\r\n});\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/comptes/comptes.schema.ts?");
 
 /***/ }),
 
@@ -485,7 +485,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.MapSchema = void 0;\r\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nexports.MapSchema = new mongoose.Schema({\r\n    _id: {\r\n        type: mongoose.SchemaTypes.ObjectId,\r\n        required: true,\r\n    },\r\n    titre: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    alias: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    description: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    type: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    createur: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    appartient: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    langue: {\r\n        type: String,\r\n        required: true,\r\n    }\r\n});\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/mappage/maps.schema.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.MapSchema = void 0;\r\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nexports.MapSchema = new mongoose.Schema({\r\n    titre: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    alias: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    description: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    type: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    createur: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    appartient: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    langue: {\r\n        type: String,\r\n        required: true,\r\n    }\r\n});\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/mappage/maps.schema.ts?");
 
 /***/ }),
 
@@ -581,7 +581,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.NoticeSchema = void 0;\r\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nexports.NoticeSchema = new mongoose.Schema({\r\n    _id: {\r\n        type: mongoose.SchemaTypes.ObjectId,\r\n        required: true,\r\n    },\r\n    metadonnees: {}\r\n});\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/notices/notices.schema.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.NoticeSchema = void 0;\r\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nexports.NoticeSchema = new mongoose.Schema({\r\n    _id: {\r\n        type: mongoose.SchemaTypes.ObjectId,\r\n        required: true,\r\n    },\r\n    metadonnees: {\r\n        type: Array,\r\n        required: true\r\n    }\r\n});\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/notices/notices.schema.ts?");
 
 /***/ }),
 
@@ -985,7 +985,7 @@ eval("module.exports = require(\"node-exiftool\");;\n\n//# sourceURL=webpack://n
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "d0daa2d7b0835dfd484e"
+/******/ 		__webpack_require__.h = () => "30a776e6537a53c0a50a"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */

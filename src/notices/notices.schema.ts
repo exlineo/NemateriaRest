@@ -11,6 +11,7 @@ export const NoticeSchema = new mongoose.Schema({
         required: true,
     },
     metadonnees:{
-
+        type:Array,
+        required:true
     }
 });

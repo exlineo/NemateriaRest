@@ -6,10 +6,10 @@ import * as mongoose from 'mongoose';
  * cf. https://mongoosejs.com/docs/schematypes.html#mixed
  */
 export const CompteSchema = new mongoose.Schema({
-    _id: {
-        type: mongoose.SchemaTypes.ObjectId,
-        required: true,
-    },
+    // _id: {
+    //     type: mongoose.SchemaTypes.ObjectId,
+    //     required: true,
+    // },
     nom: {
         type: String,
         required: false,

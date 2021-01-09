@@ -1,10 +1,10 @@
 import * as mongoose from 'mongoose';
 
 export const MapSchema = new mongoose.Schema({
-    _id: {
-        type: mongoose.SchemaTypes.ObjectId,
-        required: true,
-    },
+    // _id: {
+    //     type: mongoose.SchemaTypes.ObjectId,
+    //     required: true,
+    // },
     titre: {
         type: String,
         required: true,
