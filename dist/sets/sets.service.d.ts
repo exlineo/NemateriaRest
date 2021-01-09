@@ -1,9 +1,10 @@
 import { Model } from 'mongoose';
 import { SetModel } from './interfaces/set.interface';
+import { CreateSetDto } from './dto/create-set.dto';
 export declare class SetsService {
     private readonly setModel;
     constructor(setModel: Model<SetModel>);
-    cree(createSetDto: any): Promise<SetModel>;
+    cree(createSetDto: CreateSetDto): Promise<SetModel>;
     findAll(): Promise<SetModel[]>;
     findUn(id: any): Promise<SetModel>;
     updateUn(id: any, set: any): Promise<SetModel>;

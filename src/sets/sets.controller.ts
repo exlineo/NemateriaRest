@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Put, Delete, Body, Param } from '@nestjs/common';
+import { Controller, Get, Post, Put, Delete, Body, Param, HttpStatus, HttpException } from '@nestjs/common';
 import { CreateSetDto } from './dto/create-set.dto';
 import { SetsService } from './sets.service';
 import { SetModel } from './interfaces/set.interface';
@@ -11,7 +11,14 @@ export class SetsController {
      */
     @Post()
     async cree(@Body() creeSet:CreateSetDto) {
-        this.setsService.cree(creeSet);
+        if(!creeSet._id){
+            this.setsService.cree(creeSet);
+        }else{
+            throw new HttpException({
+                status: HttpStatus.FORBIDDEN,
+                error: 'Attention, ce SET existe déjà !',
+              }, HttpStatus.FORBIDDEN);
+        }  
     }
     /**
      * Récupérer l'ensemble des sets
