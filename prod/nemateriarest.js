@@ -756,7 +756,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.SetSchema = void 0;\r\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nexports.SetSchema = new mongoose.Schema({\r\n    _id: {\r\n        type: mongoose.SchemaTypes.ObjectId,\r\n        required: true,\r\n    },\r\n    titre: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    alias: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    description: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    type: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    createur: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    appartient: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    langue: {\r\n        type: String,\r\n        required: true,\r\n    }\r\n});\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/sets/sets.schema.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.SetSchema = void 0;\r\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nexports.SetSchema = new mongoose.Schema({\r\n    _id: {\r\n        type: mongoose.SchemaTypes.ObjectId,\r\n        required: false,\r\n    },\r\n    titre: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    alias: {\r\n        type: String,\r\n        required: true,\r\n    },\r\n    fond: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    description: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    date: {\r\n        type: Date,\r\n        required: false,\r\n    },\r\n    createur: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    gestionnaire: {\r\n        type: String,\r\n        required: false,\r\n    },\r\n    documents: {\r\n        type: Array,\r\n        required: true,\r\n    },\r\n});\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/sets/sets.schema.ts?");
 
 /***/ }),
 
@@ -970,7 +970,7 @@ eval("module.exports = require(\"node-exiftool\");;\n\n//# sourceURL=webpack://n
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "e1764f3418ffa0730c61"
+/******/ 		__webpack_require__.h = () => "d7358c94febe8e7f2aac"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
