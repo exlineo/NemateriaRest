@@ -4,7 +4,7 @@ export interface SetModel extends Document {
     readonly _id: any;
     readonly titre:string;
     readonly alias:string;
-    readonly fond:string;
+    readonly fonds:string;
     readonly description?:string;
     readonly date?:string | number;
     readonly createur?:string;

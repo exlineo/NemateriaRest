@@ -11,8 +11,8 @@ async function bootstrap() {
     origin: true,
     preflightContinue: false,
   }});
-  app.use(bodyParser.json({limit: '50mb'}));
-  app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+  app.use(bodyParser.json({limit: '30mb'}));
+  app.use(bodyParser.urlencoded({limit: '0mb', extended: true}));
   // app.enableCors();
   // app.useGlobalFilters(new DispatchError());
 

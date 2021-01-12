@@ -9,7 +9,7 @@ export const SetSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    fond: {
+    fonds: {
         type: String,
         required: false,
     },
