@@ -38,6 +38,7 @@ export class FiltresService {
      * @type FiltreModel
      */
     async updateUn(filtre): Promise<FiltreModel> {
+        console.log("Mise à jour du filtre ", filtre);
         return await this.filtreModel.findByIdAndUpdate(filtre._id, filtre).exec();
     }
     /**

@@ -12,8 +12,8 @@ export class NoticesController {
      */
     @Get()
     async findPaquet():Promise<any> {
-            console.log("Notices : pas de requete détectée, renvoie de toutes les notices");
-            return this.noticesService.findAll();
+        console.log("Notices : pas de requete détectée, renvoie de toutes les notices");
+        return await this.noticesService.findAll();
     }
     /**
      * Sélectionner toutes les notices une celles correspondant à la requête
@@ -21,8 +21,8 @@ export class NoticesController {
      */
     @Get('/collection/:c')
     async findCollection(@Param('c') c):Promise<any> {
-            console.log("Demande des notice d'une collection", c); // c = id de la collection à récupérer
-            return this.noticesService.findCollection(c);
+        console.log("Demande des notice d'une collection", c); // c = id de la collection à récupérer
+        return await this.noticesService.findCollection(c);
     }
     /**
      * Récupérer une collection en fonction de son ID
@@ -30,7 +30,7 @@ export class NoticesController {
      */
     @Get('/notice/:id')
     async findUn(@Param('id') id): Promise<NoticeModel> {
-        return this.noticesService.findUn(id);
+        return await this.noticesService.findUn(id);
     }
     /**
      * Récupérer une collection en fonction de son ID
@@ -38,7 +38,7 @@ export class NoticesController {
      */
     @Get(':count')
     async findCount(): Promise<number> {
-        return this.noticesService.countAll();
+        return await this.noticesService.countAll();
     }
     /**
      * Récupérer une collection en fonction de son ID
@@ -46,7 +46,7 @@ export class NoticesController {
      */
     @Get('/collection/:c/count')
     async findCollecCount(@Param('c') c): Promise<number> {
-        return this.noticesService.countCollec(c);
+        return await this.noticesService.countCollec(c);
     }
     /**
      * Créer une notice
@@ -54,7 +54,7 @@ export class NoticesController {
      */
     @Put()
     async cree(@Body() CreateNoticeDto: CreateNoticeDto) {
-        this.noticesService.cree(CreateNoticeDto);
+        return await this.noticesService.cree(CreateNoticeDto);
     }
     /**
      * Mettre à jour une notice
@@ -63,7 +63,7 @@ export class NoticesController {
      */
     @Post(':id')
     async updateUn(@Param('id') id, @Body() n) {
-        this.noticesService.updateUn(id, n);
+        return await this.noticesService.updateUn(id, n);
     }
     /**
      * Supprimer une notice
@@ -71,6 +71,6 @@ export class NoticesController {
      */
     @Delete(':id')
     async deleteUn(@Param('id') id) {
-        this.noticesService.deleteUn(id);
+        return await this.noticesService.deleteUn(id);
     }
 }

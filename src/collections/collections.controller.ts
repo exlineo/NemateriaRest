@@ -5,14 +5,14 @@ import { CollectionModel } from './interfaces/collection.interface';
 
 @Controller('collections')
 export class CollectionsController {
-    constructor(private readonly collectionsService: CollectionsService) { }
+    constructor(private readonly colServ: CollectionsService) { }
     
     /**
      * Récupérer l'ensemble des collections
      */
     @Get()
     async findAll(): Promise<Array<CollectionModel>> {
-        return this.collectionsService.findAll();
+        return this.colServ.findAll();
     }
     /**
      * Récupérer une collection en fonction de son ID
@@ -20,7 +20,7 @@ export class CollectionsController {
      */
     @Get(':id')
     async findUn(@Param('id') id): Promise<CollectionModel> {
-        return this.collectionsService.findUn(id);
+        return this.colServ.findUn(id);
     }
     /**
      * Récupérer une collection en fonction de son ID
@@ -28,7 +28,7 @@ export class CollectionsController {
      */
     @Get('/:id/series')
     async findSeries(@Param('id') id): Promise<object> {
-        return this.collectionsService.findSeries(id);
+        return this.colServ.findSeries(id);
     }
     /**
      * Créer une nouvelle collection
@@ -36,7 +36,7 @@ export class CollectionsController {
     @Post()
     async create(@Body() collecDto: CreateCollectionDto) {
         console.log("Ajout tnté", collecDto);
-        this.collectionsService.cree(collecDto);
+        this.colServ.cree(collecDto);
     }
     /**
      * Mettre à jour une collection
@@ -46,7 +46,7 @@ export class CollectionsController {
     @Put()
     update(@Body() upCollecDto: CreateCollectionDto) {
         console.log("Update tenté", upCollecDto);
-        return this.collectionsService.updateUn(upCollecDto);
+        return this.colServ.updateUn(upCollecDto);
     }
     /**
      * Supprimer une collection en fonction de son ID
@@ -54,6 +54,7 @@ export class CollectionsController {
      */
     @Delete(':id')
     remove(@Param('id') id: string) {
-        return `This action removes a #${id} cat`;
+        return this.colServ.deleteUn(id);
+        // return `This action removes a #${id} cat`;
     }
 }

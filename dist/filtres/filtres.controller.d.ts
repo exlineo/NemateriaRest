@@ -7,5 +7,5 @@ export declare class FiltresController {
     findUn(id: any): Promise<any>;
     creeFiltre(filtreDto: FiltreDto): Promise<import("./interfaces/filtre.interface").FiltreModel>;
     update(upFiltreDto: FiltreDto): Promise<import("./interfaces/filtre.interface").FiltreModel>;
-    remove(id: string): Promise<import("./interfaces/filtre.interface").FiltreModel>;
+    suppr(id: string): Promise<import("./interfaces/filtre.interface").FiltreModel>;
 }

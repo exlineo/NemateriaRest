@@ -28,7 +28,7 @@ export class ComptesController {
     @Get('*')
     async idErreur(): Promise<string> {
         throw new HttpException('LOGIN.NO_CONNECTION', HttpStatus.UNAUTHORIZED);
-        return await "Erreur de connexion";
+        // return await "Erreur de connexion";
     }
     
 }

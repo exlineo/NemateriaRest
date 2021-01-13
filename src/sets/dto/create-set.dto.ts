@@ -3,7 +3,7 @@ export class CreateSetDto {
     _id: ObjectId;
     readonly titre:string;
     readonly alias:string;
-    readonly fonds:string;
+    readonly fonds?:string;
     readonly description?:string;
     readonly date?:string | number;
     readonly createur?:string;

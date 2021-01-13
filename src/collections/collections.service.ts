@@ -46,13 +46,15 @@ export class CollectionsService {
      * @type String | number | Object
      */
     async updateUn(collec): Promise<CollectionModel> {
+        console.log("Mise à jour de la collection ", collec);
         return await this.collecModel.findByIdAndUpdate(collec._id, collec).exec();
     }
     /**
      * Supprimer un élément en fonction de son ID
      * @param id ID du document à supprimer
      */
-    async deleteUn(id): Promise<CollectionModel> {
+    async deleteUn(id:string): Promise<CollectionModel> {
+        console.log("Desctruction de la collection : ", id);
         return await this.collecModel.findByIdAndDelete(id).exec();
     }
     /**

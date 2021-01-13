@@ -9,7 +9,7 @@ export declare class NoticesController {
     findUn(id: any): Promise<NoticeModel>;
     findCount(): Promise<number>;
     findCollecCount(c: any): Promise<number>;
-    cree(CreateNoticeDto: CreateNoticeDto): Promise<void>;
-    updateUn(id: any, n: any): Promise<void>;
-    deleteUn(id: any): Promise<void>;
+    cree(CreateNoticeDto: CreateNoticeDto): Promise<NoticeModel>;
+    updateUn(id: any, n: any): Promise<any>;
+    deleteUn(id: any): Promise<any>;
 }

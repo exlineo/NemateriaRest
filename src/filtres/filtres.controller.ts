@@ -12,7 +12,7 @@ export class FiltresController {
      */
     @Get()
     async findAll(): Promise<Array<any>> {
-        return this.filtresServ.findAll();
+        return await this.filtresServ.findAll();
     }
     /**
      * Récupérer un filtre en fonction de son ID
@@ -20,31 +20,31 @@ export class FiltresController {
      */
     @Get(':id')
     async findUn(@Param('id') id): Promise<any> {
-        return this.filtresServ.findUn(id);
+        return await this.filtresServ.findUn(id);
     }
     /**
      * Créer un nouveau filtre
      */
     @Post()
     async creeFiltre(@Body() filtreDto: FiltreDto) {
-        return this.filtresServ.cree(filtreDto);
+        return await this.filtresServ.cree(filtreDto);
     }
     /**
      * Mettre à jour un filtre
      * Les données sont traitées directement dans l'objet envoyé dans le body (cf. FiltreService)
      */
     @Put()
-    update(@Body() upFiltreDto: FiltreDto) {
+    async update(@Body() upFiltreDto: FiltreDto) {
         console.log("Update tenté", upFiltreDto);
-        return this.filtresServ.updateUn(upFiltreDto);
+        return await this.filtresServ.updateUn(upFiltreDto);
     }
     /**
      * Supprimer un filtre en fonction de son ID
      * @param id ID du filtre à supprimer
      */
     @Delete(':id')
-    remove(@Param('id') id: string) {
+    async suppr(@Param('id') id: string) {
         // return `This action removes a #${id} filter`;
-        return this.filtresServ.deleteUn(id);
+        return await this.filtresServ.deleteUn(id);
     }
 }

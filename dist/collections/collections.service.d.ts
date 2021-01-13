@@ -8,6 +8,6 @@ export declare class CollectionsService {
     findUn(id: any): Promise<CollectionModel>;
     cree(creeCollecDto: CreateCollectionDto): Promise<CollectionModel>;
     updateUn(collec: any): Promise<CollectionModel>;
-    deleteUn(id: any): Promise<CollectionModel>;
+    deleteUn(id: string): Promise<CollectionModel>;
     findSeries(id: any): Promise<Array<Object>>;
 }

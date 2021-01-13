@@ -56,10 +56,10 @@ export class NoticesService {
         return await this.noticeModel.updateOne(id, n).exec();
     }
     /**
-     * 
+     * Supprimer une notice
      * @param id ID de la notice à supprimer
      */
     async deleteUn(id){
-        return await this.noticeModel.deleteOne(id).exec();
+        return await this.noticeModel.findByIdAndDelete(id).exec();
     }
 }

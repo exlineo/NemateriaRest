@@ -38,6 +38,7 @@ export class SetsService {
      * @type String | number | Object
      */
     async updateUn(id, set): Promise<SetModel> {
+        console.log("Mise à jour de ", id, set);
         return await this.setModel.findByIdAndUpdate(id, set).exec();
     }
     /**
