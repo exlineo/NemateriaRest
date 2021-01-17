@@ -581,7 +581,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.NoticeSchema = void 0;\r\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nexports.NoticeSchema = new mongoose.Schema({\r\n    _id: {\r\n        type: mongoose.SchemaTypes.ObjectId,\r\n        required: true,\r\n    },\r\n    metadonnees: {\r\n        type: Array,\r\n        required: true\r\n    }\r\n});\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/notices/notices.schema.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.NoticeSchema = void 0;\r\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\r\nexports.NoticeSchema = new mongoose.Schema({\r\n    metadonnees: {\r\n        type: Array,\r\n        required: true\r\n    }\r\n});\r\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/notices/notices.schema.ts?");
 
 /***/ }),
 
@@ -985,7 +985,7 @@ eval("module.exports = require(\"node-exiftool\");;\n\n//# sourceURL=webpack://n
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "0ee273d36d987ecd7a74"
+/******/ 		__webpack_require__.h = () => "69712ec3ae7f735d80d1"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */

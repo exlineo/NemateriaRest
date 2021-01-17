@@ -6,10 +6,6 @@ import * as mongoose from 'mongoose';
  * cf. https://mongoosejs.com/docs/schematypes.html#mixed
  */
 export const NoticeSchema = new mongoose.Schema({
-    _id: {
-        type: mongoose.SchemaTypes.ObjectId,
-        required: true,
-    },
     metadonnees:{
         type:Array,
         required:true
