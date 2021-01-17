@@ -7,7 +7,7 @@ export declare class CollectionsController {
     findAll(): Promise<Array<CollectionModel>>;
     findUn(id: any): Promise<CollectionModel>;
     findSeries(id: any): Promise<object>;
-    create(collecDto: CreateCollectionDto): Promise<void>;
+    creeCollec(collecDto: CreateCollectionDto): Promise<void>;
     update(upCollecDto: CreateCollectionDto): Promise<CollectionModel>;
     remove(id: string): Promise<CollectionModel>;
 }

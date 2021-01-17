@@ -34,7 +34,7 @@ export class CollectionsController {
      * Créer une nouvelle collection
      */
     @Post()
-    async create(@Body() collecDto: CreateCollectionDto) {
+    async creeCollec(@Body() collecDto: CreateCollectionDto) {
         console.log("Ajout tnté", collecDto);
         this.colServ.cree(collecDto);
     }

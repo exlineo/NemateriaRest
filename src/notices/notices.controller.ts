@@ -52,7 +52,7 @@ export class NoticesController {
      * Créer une notice
      * @param CreateNoticeDto Schéma de la notice à créer (reçu dans le body)
      */
-    @Put()
+    @Post()
     async cree(@Body() CreateNoticeDto: CreateNoticeDto) {
         return await this.noticesService.cree(CreateNoticeDto);
     }
@@ -61,7 +61,7 @@ export class NoticesController {
      * @param id ID de la notice à mettre à jour
      * @param n Données de la notice mise à jour
      */
-    @Post(':id')
+    @Put(':id')
     async updateUn(@Param('id') id, @Body() n) {
         return await this.noticesService.updateUn(id, n);
     }
