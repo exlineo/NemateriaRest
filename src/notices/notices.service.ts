@@ -10,9 +10,23 @@ export class NoticesService {
     constructor(
         @Inject(NOTICES_MODEL_PROVIDER) private readonly noticeModel: Model<NoticeModel>) { }
 
+    /**
+     * Insérer une notice dans Mongo
+     * @param createNoticeDto Notice à insérer
+     */
     async cree(createNoticeDto: CreateNoticeDto): Promise<NoticeModel> {
         const createdNotice = new this.noticeModel(createNoticeDto);
         return await createdNotice.save();
+    }
+    /**
+     * Tableau de notices à insérer
+     * @param tabDTO Tableau de notices
+     */
+    async creeMultiples(tabDTO: Array<CreateNoticeDto>): Promise<any> {
+        const addNotices = new this.noticeModel(tabDTO);
+        return await addNotices.collection.insertMany(tabDTO)
+        .then(r => r)
+        .catch(e => console.log(e));
     }
     /**
      * Rechercher des données en fonction de critères transmis

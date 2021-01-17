@@ -57,6 +57,14 @@ export class NoticesController {
         return await this.noticesService.cree(CreateNoticeDto);
     }
     /**
+     * Créer une notice
+     * @param CreateNoticeDto Schéma de la notice à créer (reçu dans le body)
+     */
+    @Post(':multiple')
+    async creeMultiples(@Param('multiple') multiple:boolean, @Body() ArrayDTO: Array<CreateNoticeDto>) {
+        return await this.noticesService.creeMultiples(ArrayDTO);
+    }
+    /**
      * Mettre à jour une notice
      * @param id ID de la notice à mettre à jour
      * @param n Données de la notice mise à jour

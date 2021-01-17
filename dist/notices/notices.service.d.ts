@@ -5,6 +5,7 @@ export declare class NoticesService {
     private readonly noticeModel;
     constructor(noticeModel: Model<NoticeModel>);
     cree(createNoticeDto: CreateNoticeDto): Promise<NoticeModel>;
+    creeMultiples(tabDTO: Array<CreateNoticeDto>): Promise<any>;
     findUn(id: any): Promise<any>;
     findCollection(id: any): Promise<NoticeModel[]>;
     findAll(): Promise<NoticeModel[]>;
