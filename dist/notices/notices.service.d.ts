@@ -8,7 +8,8 @@ export declare class NoticesService {
     creeMultiples(tabDTO: Array<CreateNoticeDto>): Promise<any>;
     findUn(id: any): Promise<any>;
     findCollection(id: any): Promise<NoticeModel[]>;
-    findAll(): Promise<NoticeModel[]>;
+    findNoticesByCollec(ids: any): Promise<NoticeModel[]>;
+    findAll(): Promise<Array<NoticeModel>>;
     countAll(): Promise<any>;
     countCollec(id: any): Promise<any>;
     updateUn(id: any, n: any): Promise<any>;

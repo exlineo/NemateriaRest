@@ -56,6 +56,16 @@ export class NoticesController {
     async cree(@Body() CreateNoticeDto: CreateNoticeDto) {
         return await this.noticesService.cree(CreateNoticeDto);
     }
+    
+    /**
+     * Sélectionner toutes les notices une celles correspondant à la requête
+     * @param c Paramètre collection transmis
+     */
+    @Post('/collection')
+    async findNoticesByCollec(@Body('ids') ids):Promise<any> {
+        console.log("Demande des notice d'une collection", ids); // c = id de la collection à récupérer
+        return await this.noticesService.findNoticesByCollec(ids);
+    }
     /**
      * Créer une notice
      * @param CreateNoticeDto Schéma de la notice à créer (reçu dans le body)

@@ -44,10 +44,19 @@ export class NoticesService {
         return await this.noticeModel.find({ 'relations.idCollection' : id }).exec();
     }
     /**
+     * Rechercher des notices à partir d'un tableau d'IDs
+     * @param req Argument transmis pour faire une recherche
+     */
+    async findNoticesByCollec(ids): Promise<NoticeModel[]> {
+        console.log("Id collection", ids);
+        return await this.noticeModel.find().where('_id').in(ids).exec();
+    }
+    /**
      * Trouver toutes les notices
      */
-    async findAll(): Promise<NoticeModel[]> {
-        return await this.noticeModel.find().exec();
+    async findAll(): Promise<Array<NoticeModel>> {
+        return [];
+        // return await this.noticeModel.find().exec();
     }
     /**
      * Donner le nombre global de notices disponibles
