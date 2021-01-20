@@ -62,7 +62,7 @@ export class NoticesController {
      * @param c Paramètre collection transmis
      */
     @Post('/collection')
-    async findNoticesByCollec(@Body('ids') ids):Promise<any> {
+    async findNoticesByCollec(@Body() ids):Promise<any> {
         console.log("Demande des notice d'une collection", ids); // c = id de la collection à récupérer
         return await this.noticesService.findNoticesByCollec(ids);
     }
