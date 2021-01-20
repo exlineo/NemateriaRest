@@ -48,7 +48,7 @@ export class NoticesService {
      * @param req Argument transmis pour faire une recherche
      */
     async findNoticesByCollec(ids): Promise<NoticeModel[]> {
-        console.log("Id collection", ids);
+        console.log("Ids des notices d'une collection", ids);
         return await this.noticeModel.find().where('_id').in(ids).exec();
     }
     /**
