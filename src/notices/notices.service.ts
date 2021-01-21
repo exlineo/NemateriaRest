@@ -55,8 +55,7 @@ export class NoticesService {
      * Trouver toutes les notices
      */
     async findAll(): Promise<Array<NoticeModel>> {
-        return [];
-        // return await this.noticeModel.find().exec();
+        return await this.noticeModel.find().exec();
     }
     /**
      * Donner le nombre global de notices disponibles
