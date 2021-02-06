@@ -111,7 +111,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexpo
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.CollectionSchema = void 0;\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\nexports.CollectionSchema = new mongoose.Schema({\n    titre: {\n        type: String,\n        required: true,\n    },\n    alias: {\n        type: String,\n        required: false,\n    },\n    description: {\n        type: String,\n        required: true,\n    },\n    type: {\n        type: String,\n        required: true,\n    },\n    createur: {\n        type: String,\n        required: true,\n    },\n    fond: {\n        type: String,\n        required: false,\n    },\n    langue: {\n        type: String,\n        required: false,\n    },\n    groupe: {\n        type: Array,\n        required: false,\n    },\n    notices: {\n        type: Array,\n        required: false,\n    },\n    series: {\n        type: Array,\n        required: false,\n    }\n});\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/collections/collections.schema.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.CollectionSchema = void 0;\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\nexports.CollectionSchema = new mongoose.Schema({\n    titre: {\n        type: String,\n        required: true,\n    },\n    alias: {\n        type: String,\n        required: false,\n    },\n    description: {\n        type: String,\n        required: false,\n    },\n    date: {\n        type: Date,\n        required: true,\n    },\n    type: {\n        type: String,\n        required: true,\n    },\n    createur: {\n        type: String,\n        required: true,\n    },\n    fonds: {\n        type: String,\n        required: false,\n    },\n    langue: {\n        type: String,\n        required: false,\n    },\n    notices: {\n        type: Array,\n        required: false,\n    },\n    series: {\n        type: Array,\n        required: false,\n    }\n});\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/collections/collections.schema.ts?");
 
 /***/ }),
 
@@ -581,7 +581,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexpo
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.NoticeSchema = void 0;\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\nexports.NoticeSchema = new mongoose.Schema({\n    metadonnees: {\n        type: Array,\n        required: true\n    }\n});\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/notices/notices.schema.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.NoticeSchema = void 0;\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\nexports.NoticeSchema = new mongoose.Schema({\n    date: {\n        type: Date,\n        required: false\n    },\n    metadonnees: {\n        type: Array,\n        required: true\n    }\n});\n\n\n//# sourceURL=webpack://nemateria-oai-pmh/./src/notices/notices.schema.ts?");
 
 /***/ }),
 
@@ -985,7 +985,7 @@ eval("module.exports = require(\"node-exiftool\");;\n\n//# sourceURL=webpack://n
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "642cb2df13955e76b3b8"
+/******/ 		__webpack_require__.h = () => "6cabf1584ac0bf947211"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */

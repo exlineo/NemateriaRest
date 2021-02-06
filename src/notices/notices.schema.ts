@@ -6,6 +6,10 @@ import * as mongoose from 'mongoose';
  * cf. https://mongoosejs.com/docs/schematypes.html#mixed
  */
 export const NoticeSchema = new mongoose.Schema({
+    date:{
+        type:Date,
+        required:false
+    },
     metadonnees:{
         type:Array,
         required:true

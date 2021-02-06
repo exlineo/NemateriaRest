@@ -11,6 +11,10 @@ export const CollectionSchema = new mongoose.Schema({
     },
     description: {
         type: String,
+        required: false,
+    },
+    date: {
+        type: Date,
         required: true,
     },
     type: {
@@ -21,16 +25,12 @@ export const CollectionSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    fond: {
+    fonds: {
         type: String,
         required: false,
     },
     langue: {
         type: String,
-        required: false,
-    },
-    groupe: {
-        type: Array,
         required: false,
     },
     notices: {
