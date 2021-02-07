@@ -11,13 +11,17 @@ export const FiltresSchema = new mongoose.Schema({
     },
     description: {
         type: String,
-        required: true,
+        required: false,
     },
     createur: {
         type: String,
         required: true,
     },
     donnees: {
+        type: Array,
+        required: true,
+    },
+    prefix: {
         type: Array,
         required: true,
     }

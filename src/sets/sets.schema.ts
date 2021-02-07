@@ -33,4 +33,8 @@ export const SetSchema = new mongoose.Schema({
         type: Array,
         required: true,
     },
+    prefix: {
+        type: Array,
+        required: true,
+    }
 });

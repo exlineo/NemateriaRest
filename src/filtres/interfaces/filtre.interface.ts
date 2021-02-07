@@ -7,4 +7,5 @@ export interface FiltreModel extends Document {
     readonly description: string;
     readonly createur: string;
     readonly donnees:Array<string>;
+    readonly prefix:Array<string>;
 }
