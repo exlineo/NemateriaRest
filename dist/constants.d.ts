@@ -9,3 +9,4 @@ export declare const SCAN_MODEL_PROVIDER = "ScanModelToken";
 export declare const FILTRES_MODEL_PROVIDER = "FiltresModelToken";
 export declare const MAPS_MODEL_PROVIDER = "MapsModelToken";
 export declare const COMPTES_MODEL_PROVIDER = "ComptesModelToken";
+export declare const PREFIX_MODEL_PROVIDER = "PrefixModelToken";

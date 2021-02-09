@@ -5,4 +5,5 @@ export declare class FiltreDto {
     readonly description: string;
     readonly createur?: string;
     readonly donnees: Array<string>;
+    readonly prefix: Array<string>;
 }

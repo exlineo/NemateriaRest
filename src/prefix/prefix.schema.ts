@@ -5,17 +5,13 @@ import * as mongoose from 'mongoose';
  * Le metadonnees sont d'une type any pour permettre une injection libre
  * cf. https://mongoosejs.com/docs/schematypes.html#mixed
  */
-export const NoticeSchema = new mongoose.Schema({
-    date:{
-        type:Date,
-        required:false
-    },
-    prefix:{
+export const PrefixSchema = new mongoose.Schema({
+    alias:{
         type:String,
         required:false
     },
-    metadonnees:{
-        type:Array,
-        required:true
+    titre:{
+        type:String,
+        required:false
     }
 });

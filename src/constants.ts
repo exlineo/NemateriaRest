@@ -9,3 +9,4 @@ export const SCAN_MODEL_PROVIDER = 'ScanModelToken';
 export const FILTRES_MODEL_PROVIDER = 'FiltresModelToken';
 export const MAPS_MODEL_PROVIDER = 'MapsModelToken';
 export const COMPTES_MODEL_PROVIDER = 'ComptesModelToken';
+export const PREFIX_MODEL_PROVIDER = 'PrefixModelToken';
