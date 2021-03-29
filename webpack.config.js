@@ -17,7 +17,7 @@ module.exports = {
             use: 'ts-loader'
         }, ],
     },
-    mode: "development",
+    mode: "production",
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },

@@ -63,7 +63,7 @@ export class NoticesController {
      */
     @Post('/collection')
     async findNoticesByCollec(@Body() ids):Promise<any> {
-        console.log("Demande des notice d'une collection", ids); // c = id de la collection à récupérer
+        console.log("Demande des notices d'une collection", ids); // c = id de la collection à récupérer
         return await this.noticesService.findNoticesByCollec(ids);
     }
     /**

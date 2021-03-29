@@ -3,7 +3,6 @@ import { Model } from 'mongoose';
 import * as jwt from 'jsonwebtoken';
 
 import { CompteModel } from '../comptes/interfaces/compte.interface';
-import { CreateCompteDto } from '../comptes/dto/create-compte.dto';
 import { COMPTES_MODEL_PROVIDER } from '../constants';
 import { JWT_CONFIG } from '../config';
 

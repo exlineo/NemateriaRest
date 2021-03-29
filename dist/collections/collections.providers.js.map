@@ -1,1 +1,0 @@
-{"version":3,"file":"collections.providers.js","sourceRoot":"","sources":["../../src/collections/collections.providers.ts"],"names":[],"mappings":";;;AAEA,6DAAwD;AACxD,4CAAuE;AAE1D,QAAA,oBAAoB,GAAG;IAChC;QACI,OAAO,EAAE,sCAA0B;QACnC,UAAU,EAAE,CAAC,UAAsB,EAAE,EAAE,CAAC,UAAU,CAAC,KAAK,CAAC,YAAY,EAAE,qCAAgB,CAAC;QACxF,MAAM,EAAE,CAAC,uBAAW,CAAC;KACxB;CACJ,CAAC"}
